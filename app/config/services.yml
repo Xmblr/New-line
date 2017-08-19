@@ -1,0 +1,23 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/book/service_container.html
+parameters:
+#    parameter_name: value
+
+services:
+#    service_name:
+#        class: AppBundle\Directory\ClassName
+#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+
+    admin.blog:
+            class: Blogger\BlogBundle\Admin\BlogAdmin
+            arguments: [~, Blogger\BlogBundle\Entity\Blog, ~]
+            tags:
+                - { name: sonata.admin, manager_type: orm, label: Blog }
+            public: true
+
+    admin.comment:
+            class:  Blogger\BlogBundle\Admin\CommentAdmin
+            arguments: [~, Blogger\BlogBundle\Entity\Comment, ~]
+            tags:
+                - { name: sonata.admin, manager_type: orm, label: Comments }
+            public: true
