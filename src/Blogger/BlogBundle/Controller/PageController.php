@@ -55,4 +55,34 @@ class PageController extends Controller
         ));
     }
 
+    public function servicesAction()
+    {
+        return $this->render('BloggerBlogBundle:Page:services.html.twig');
+    }
+
+
+    public function seoAction()
+    {
+        return $this->render('BloggerBlogBundle:Page:seo.html.twig');
+    }
+
+
+public function createAction()
+{
+    return $this->render('BloggerBlogBundle:Page:create.html.twig');
+}
+
+    public function supportAction()
+    {
+        return $this->render('BloggerBlogBundle:Page:support.html.twig');
+    }
+    public function programmerAction()
+    {
+        return $this->render('BloggerBlogBundle:Page:programmer.html.twig');
+    }
+    public function projectsAction()
+    {
+        return $this->render('BloggerBlogBundle:Page:projects.html.twig');
+    }
+
 }

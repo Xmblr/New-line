@@ -1,0 +1,181 @@
+{# src/Blogger/BlogBundle/Resources/views/Page/about.html.twig #}
+{% extends 'BloggerBlogBundle::layout.html.twig' %}
+
+{% block title %}Услуги программиста - гарантия качества!{% endblock %}
+
+{% block header %}
+    {{ parent() }}
+{% endblock %}
+
+{% block body %}
+    <ol class="breadcrumb">
+        <li><a href="{{ path('BloggerBlogBundle_homepage') }}">Главная</a></li>
+        <li><a href="{{ path('BloggerBlogBundle_services') }}">Услуги</a></li>
+        <li><a href="{{ path('BloggerBlogBundle_programmer') }}" class="active">Услуги программиста</a></li>
+    </ol>
+
+    <div class="row" style="background-color: white;">
+        <div class="container-fluid" >
+
+            <h1 style="text-align: center; padding-bottom: 3%; font-size: 32px;">
+                Услуги программиста?
+            </h1>
+            <div class="col-md-push-2 col-md-8" style="text-align: center;">
+                <p class="home-o-nas" style="color:black; padding-bottom: 3%; text-transform: none;">Все совершенствуется, и сайты не исключение, поэтому рано или поздно любой сайт нуждается в доработке. В студии разработки и продвижения сайтов New-line имеется сплоченный коллектив программистов, которые готовы столкнуться со сложными задачами. Внедрение дополнительных модулей, правка кода, восстановление сайта, перенос сайта - и это далеко не полный список того, что могут сделать наши программисты.</p>
+
+                <a href="#" class="btn" style="border: 1px solid black;">Заказать</a>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div class="row" style="background-image: url('/images/fon-slide.jpg');background-size: 100% auto;">
+        <div class="container-fluid">
+            <h3 class="text-white-big">Популярные услуги</h3>
+            <div class="col-md-4" style="margin-bottom:7%;">
+                <div class="square-white">
+
+                    <span class="block4" style="display:table-cell!important; vertical-align:middle;">
+                Внедрение обратного звонка на сайт
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-4" style="margin-bottom:7%;">
+                <div class="square-white">
+                    <span class="block5" style="display:table-cell!important; vertical-align:middle;">
+                Быстрый заказ на сайт
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-4" style="margin-bottom:7%;">
+                <div class="square-white">
+                    <span class="block6" style="display:table-cell!important; vertical-align:middle;">
+                Добавление кнопок социальных сетей на сайт
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Form Section-->
+    <section class="section bg-gray-light" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4" style="text-align:center;">
+                    {#<i class="fa fa-quote-left fa-3x" aria-hidden="true"></i>#}
+
+
+                    <div id="first-slider">
+                        <h3 style="color: black; font-size: 20px; text-transform: uppercase; text-align: center; font-family: Century Gothic; font-weight: 500;">
+                            Немного мотивации</h3>
+                        <div id="carousel-example-generic" class="carousel slide carousel-fade">
+
+
+                            <div id="first-slider">
+                                <div id="carousel-example-generic" class="carousel slide carousel-fade">
+                                    <!-- Indicators -->
+
+                                    <!-- Wrapper for slides -->
+                                    <div class="carousel-inner" role="listbox">
+                                        <!-- Item 1 -->
+                                        <div class="item active slide-content " style="width:100%; left:0%; height: auto;">
+                                            <p class="quote-2"><i>Для нас не должно существовать никаких пределов</i></p>
+                                            <p style="margin-top:7%;text-align:center;">Ричард Бах</br>Философ и психолог</p>
+
+                                            <div class="bg-overlay"></div>
+                                        </div>
+                                        <!-- Item 2 -->
+                                        <div class="item slide-content" style="width:100%; left:0%; height: auto;">
+                                            <p class="quote-2"><i>Вы не будете расти, если не будете пытаться сделать что-то за пределами того, что вы уже знаете в совершенстве.</i></p>
+                                            <p style="margin-top:7%;text-align:center;">Уильям Джеймс</br>Писатель и философ</p>
+
+                                            <div class="bg-overlay"></div>
+
+
+                                        </div>
+                                        <!-- Item 3 -->
+                                        <div class="item slide-content" style="width:100%; left:0%; height: auto;">
+                                            <p class="quote-2"><i>Для нас не должно существовать никаких пределов</i></p>
+                                            <p style="margin-top:7%;text-align:center;">Ричард Бах</br>Писатель и философ</p>
+
+                                            <div class="bg-overlay"></div>
+
+                                        </div>
+
+                                        <!-- Indicators -->
+                                        <ol class="carousel-indicators" style="position:relative; margin-top: 30px;">
+                                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+
+                                        </ol>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+                <div class="col-md-8">
+                    <div class="text-center">
+                        <h3 style="margin-bottom:10px; font-size: 20px; text-transform: uppercase;">Остались вопросы?</h3>
+                        <img src="images/title-border.png" alt="" class="img-responsive center-block"/>
+                        <p class="sub-title text-muted">Заполните форму обратной связи и наши специалисты свяжутся с
+                            вами в ближайшее время.</p>
+                    </div>
+
+
+                    <form>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="username" placeholder="Имя" required/>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="useremail" placeholder="Ваш Email"
+                                           required/>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" id="subject" placeholder="Тема" required/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                            <textarea class="form-control" rows="5" id="message"
+                                      placeholder="Сообщение...."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 text-right">
+                                <input type="submit" class="submitBnt btn btn-custom" value="Отправить сообщение"
+                                       style="color:black;">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--END FORM-->
+{% endblock %}

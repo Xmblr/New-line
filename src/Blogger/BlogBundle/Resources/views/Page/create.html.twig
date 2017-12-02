@@ -1,0 +1,382 @@
+{% extends 'BloggerBlogBundle::layout.html.twig' %}
+
+{% block title %}Создание сайтов в Минске, отличные цены - Разработка сайтов в Минске{% endblock %}
+
+{% block header %}
+    {{ parent() }}
+{% endblock %}
+
+{% block body %}
+    <ol class="breadcrumb" style="background-color: white;">
+        <li><a href="#">Главная</a></li>
+        <li><a href="{{ path('BloggerBlogBundle_services') }}" class="active">Услуги</a></li>
+        <li><a href="{{ path('BloggerBlogBundle_seo') }}" class="active">Создание сайтов</a></li>
+    </ol>
+    <div class="row" style="background-color: white;">
+        <div class="container-fluid" >
+
+            <h1 style="text-align: center; padding-bottom: 3%; font-size: 32px;">
+                Зачем нужен сайт?
+            </h1>
+            <div class="col-md-push-2 col-md-8" style="text-align: center;">
+                <p class="home-o-nas" style="color:black; padding-bottom: 3%; text-transform: none;">С помощью сайта компания может приобрести уникальность, узнаваемость и эффективность бизнеса. На каждом сайте пребывает именно та аудитория, которая интересуется тематикой данного ресурса. Только возможности интернет сайта позволят в полной мере, доступно и наглядно продемонстрировать и донести информацию пользователям 24 часа в сутки. С помощью сайта реализуется возможность по привлечению новых клиентов и поддержка старых. Упрощается процесс общения и переписки. Собственный сайт компании на сегодняшний день — это самый результативный показатель коммуникации и информативности. </p>
+
+                <a href="#" class="btn" style="border: 1px solid black;">Заполнить БРИФ</a>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <section class="section bg-custom seo-foto" style="">
+        <div class="container">
+            <div class="row">
+                <h2 class="text-white-big">
+                    Преимущества создания сайта в New-Line studio:</h2>
+
+                <div class="col-md-4">
+                    <div class="" style="text-align:center; color:white;">
+                        <div class="fa fa-thumbs-o-up fa-5x" aria-hidden="true" style="padding-bottom: 10%"></div>
+
+                        <div class="home-text-stat" style="color:white;">
+                            Оптимальная цена
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="" style="text-align:center; color:white;">
+                        <div class="fa fa-cogs fa-5x" aria-hidden="true" style="padding-bottom: 10%"></div>
+                        <div class="home-text-stat" style="color:white;">
+                            Новейшие технологий
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="" style="text-align:center; color:white;">
+                        <div class="fa fa-smile-o fa-5x" aria-hidden="true" style="padding-bottom: 10%"></div>
+                        <div class="home-text-stat" style="color:white;">
+                            Особый подход
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="pricing">
+        <div class="container">
+            <div class="row">
+                <div class="text-center">
+                    <h3 class="text-black-big">Цены на создание сайта</h3>
+
+                     </div>
+            </div>
+
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-3 margin-t-20">
+                            <div class="bg-gray text-center padding-b-30 pricing-plan">
+                                <div class="bg-dark plan-name">
+                                    <p class="text-uppercase text-white">Landing Page</p>
+                                </div>
+                                <div class="plan-price text-center bg-white">
+                                    <h3><b>от 150 руб</b></h3>
+
+                                </div>
+                                <div class="pricing-features bg-gray padding-b-30">
+                                    <p>1 страница</p>
+                                    <p class="text-muted" style="text-decoration: line-through;">CMS (Управление сайтом)</p>
+                                    <p>Адаптивная мобильная версия</p>
+                                    <p class="text-muted" style="text-decoration: line-through;">Корзина, карточка товара</p>
+                                    <p>Обратный звонок</p>
+                                </div>
+                                <a href="#" class="btn" style="border: 1px solid white;">Заказать</a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 margin-t-20">
+                            <div class="bg-gray text-center padding-b-30 pricing-plan">
+                                <div class="bg-dark plan-name">
+                                    <p class="text-uppercase text-white">Сайт-визитка</p>
+                                </div>
+                                <div class="plan-price text-center bg-white">
+                                    <h3><b>от 500 руб</b></h3>
+                                    <p class="text-muted" style="text-decoration: line-through;"><small>600 руб</small></p>
+                                </div>
+                                <div class="pricing-features bg-gray padding-b-30">
+                                    <p>до 10 страниц</p>
+                                    <p>CMS (Управление сайтом)</p>
+                                    <p>Адаптивная мобильная версия</p>
+                                    <p class="text-muted" style="text-decoration: line-through;">Корзина, карточка товара</p>
+                                    <p>Обратный звонок</p>
+
+                            </div>
+                                <a href="#" class="btn" style="border: 1px solid white;">Заказать</a>
+                        </div></div>
+
+                        <div class="col-md-3 margin-t-20">
+                                <div class="bg-gray text-center padding-b-30 pricing-plan">
+                                    <div class="bg-dark plan-name">
+                                        <p class="text-uppercase text-white">Корпоративный</p>
+                                    </div>
+                                    <div class="plan-price text-center bg-white">
+                                        <h3><b>от 700 руб</b></h3>
+                                        <p class="text-muted" style="text-decoration: line-through;"><small>900 руб</small></p>
+                                    </div>
+                                    <div class="pricing-features bg-gray padding-b-30">
+                                        <p>Более 10 страниц</p>
+                                        <p>CMS (Управление сайтом)</p>
+                                        <p>Адаптивная мобильная версия</p>
+                                        <p class="text-muted" style="text-decoration: line-through;">Корзина, карточка товара</p>
+                                        <p>Обратный звонок</p>
+
+                                    </div>
+                                    <a href="#" class="btn" style="border: 1px solid white;">Заказать</a>
+                                </div>
+                            </div>
+
+                        <div class="col-md-3 margin-t-20">
+                                    <div class="bg-gray text-center padding-b-30 pricing-plan">
+                                        <div class="bg-dark plan-name">
+                                            <p class="text-uppercase text-white">Интернет-магазин</p>
+                                        </div>
+                                        <div class="plan-price text-center bg-white">
+                                            <h3><b>от 900 руб</b></h3>
+                                            <p class="text-muted" style="text-decoration: line-through;"><small>1100 руб</small></p>
+                                        </div>
+                                        <div class="pricing-features bg-gray padding-b-30">
+                                            <p>Более 10 страниц</p>
+                                            <p>CMS (Управление сайтом)</p>
+                                            <p>Адаптивная мобильная версия</p>
+                                            <p>Корзина, карточка товара</p>
+                                            <p>Обратный звонок</p>
+
+                                        </div>
+                                        <a href="#" class="btn" style="border: 1px solid white;">Заказать</a>
+                                    </div>
+                    </div>
+                </div>
+
+        </div>
+        </div>
+    </section>
+
+
+    <section id="home">
+
+        <div id="first-slider" style="background-image: url('/images/fon-slide.jpg');background-size: 100% auto;">
+            <h3 class="text-white-big" style="padding-top:3%;">
+                Наши работы</h3>
+            <div id="carousel-example-generic" class="carousel slide carousel-fade">
+                <!-- Indicators -->
+                <ol class="carousel-indicators" style="margin-bottom: 15px;">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                </ol>
+
+
+                <div id="first-slider">
+                    <div id="carousel-example-generic" class="carousel slide carousel-fade">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators" style="margin-bottom: 15px;">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <!-- Item 1 -->
+                            <div class="item active slide-content"
+                                 style="background-image: url('/images/work-123.png'); background-size: 100% auto;">
+                                <div class="bg-overlay"></div>
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="item slide-content"
+                                 style="background-image: url('images/work-2.png'); background-size: 100% auto;">
+                                <div class="bg-overlay"></div>
+
+                            </div>
+                            <!-- Item 3 -->
+                            <div class="item slide-content"
+                                 style="background-image: url('images/work-3.png'); background-size: 100% auto;">
+                                <div class="bg-overlay"></div>
+
+                            </div>
+
+                            <!-- Item 4 -->
+                            <div class="item slide-content"
+                                 style="background-image: url('images/work-4.png'); background-size: 100% auto;">
+                                <div class="bg-overlay"></div>
+
+                            </div>
+
+                            <!-- Item 5 -->
+                            <div class="item slide-content"
+                                 style="background-image: url('images/work-5.png'); background-size: 100% auto;">
+                                <div class="bg-overlay"></div>
+
+                            </div>
+
+                        </div>
+                        <!-- End Wrapper for slides-->
+                        <a class="left carousel-control" href="#carousel-example-generic" role="button"
+                           data-slide="prev">
+                            <i class="mdi mdi-chevron-left" style="color:white;"></i><span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button"
+                           data-slide="next">
+                            <i class="mdi mdi-chevron-right" style="color:white;"></i><span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- End Wrapper for slides-->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <i class="mdi mdi-chevron-left" style="color:white;"></i><span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <i class="mdi mdi-chevron-right" style="color:white;"></i><span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Form Section-->
+    <section class="section bg-gray-light" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4" style="text-align:center;">
+                    {#<i class="fa fa-quote-left fa-3x" aria-hidden="true"></i>#}
+
+
+                    <div id="first-slider">
+                        <h3 class="text-black" style="padding-top:15px;">
+                            Немного мотивации</h3>
+                        <div id="carousel-example-generic" class="carousel slide carousel-fade">
+
+
+                            <div id="first-slider">
+                                <div id="carousel-example-generic" class="carousel slide carousel-fade">
+                                    <!-- Indicators -->
+
+                                    <!-- Wrapper for slides -->
+                                    <div class="carousel-inner" role="listbox">
+                                        <!-- Item 1 -->
+                                        <div class="item active slide-content "
+                                             style="width:100%; left:0%; height: auto;">
+                                            <p class="quote-2"><i>Для нас не должно существовать никаких пределов</i>
+                                            </p>
+                                            <p style="margin-top:7%;text-align:center;">Ричард Бах</br>Философ и
+                                                психолог</p>
+
+                                            <div class="bg-overlay"></div>
+                                        </div>
+                                        <!-- Item 2 -->
+                                        <div class="item slide-content" style="width:100%; left:0%; height: auto;">
+                                            <p class="quote-2"><i>Вы не будете расти, если не будете пытаться сделать
+                                                    что-то за пределами того, что вы уже знаете в совершенстве.</i></p>
+                                            <p style="margin-top:7%;text-align:center;">Уильям Джеймс</br>Писатель и
+                                                философ</p>
+
+                                            <div class="bg-overlay"></div>
+
+
+                                        </div>
+                                        <!-- Item 3 -->
+                                        <div class="item slide-content" style="width:100%; left:0%; height: auto;">
+                                            <p class="quote-2"><i>Для нас не должно существовать никаких пределов</i>
+                                            </p>
+                                            <p style="margin-top:7%;text-align:center;">Ричард Бах</br>Писатель и
+                                                философ</p>
+
+                                            <div class="bg-overlay"></div>
+
+                                        </div>
+
+                                        <!-- Indicators -->
+                                        <ol class="carousel-indicators" style="position:relative; margin-top: 30px;">
+                                            <li data-target="#carousel-example-generic" data-slide-to="0"
+                                                class="active"></li>
+                                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+
+                                        </ol>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div class="col-md-8">
+                    <div class="text-center">
+                        <h3 class="text-black" style="padding-top:15px;">Остались
+                            вопросы?</h3>
+                        <img src="images/title-border.png" alt="" class="img-responsive center-block"/>
+                        <p class="sub-title text-muted">Заполните форму обратной связи и наши специалисты свяжутся с
+                            вами в ближайшее время.</p>
+                    </div>
+
+
+                    <form>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="username" placeholder="Имя" required/>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="useremail" placeholder="Ваш Email"
+                                           required/>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" id="subject" placeholder="Тема" required/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                            <textarea class="form-control" rows="5" id="message"
+                                      placeholder="Сообщение...."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 text-right">
+                                <input type="submit" class="submitBnt btn btn-custom" value="Отправить сообщение"
+                                       style="color:black;">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--END FORM-->
+{% endblock %}

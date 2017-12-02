@@ -39,3 +39,39 @@ BloggerBlogBundle_comment_create:
     requirements:
         methods:  POST
         blog_id: \d+
+
+BloggerBlogBundle_services:
+    path:   /services
+    defaults: { _controller: "BloggerBlogBundle:Page:services" }
+    requirements:
+         methods:  GET
+
+BloggerBlogBundle_seo:
+    path:   /services/seo
+    defaults: { _controller: "BloggerBlogBundle:Page:seo" }
+    requirements:
+    methods:  GET
+
+BloggerBlogBundle_create:
+    path:   /services/create-new-site
+    defaults: { _controller: "BloggerBlogBundle:Page:create" }
+    requirements:
+    methods:  GET
+
+BloggerBlogBundle_support:
+    path:   /services/support
+    defaults: { _controller: "BloggerBlogBundle:Page:support" }
+    requirements:
+    methods:  GET
+
+BloggerBlogBundle_programmer:
+    path:   /services/programmer
+    defaults: { _controller: "BloggerBlogBundle:Page:programmer" }
+    requirements:
+    methods:  GET
+
+BloggerBlogBundle_projects:
+    path:   /projects
+    defaults: { _controller: "BloggerBlogBundle:Page:projects" }
+    requirements:
+    methods:  GET

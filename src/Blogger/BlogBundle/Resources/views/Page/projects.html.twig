@@ -1,0 +1,518 @@
+{# src/Blogger/BlogBundle/Resources/views/Page/about.html.twig #}
+{% extends 'BloggerBlogBundle::layout.html.twig' %}
+
+{% block title %}Наши проекты!{% endblock %}
+
+{% block header %}
+    {{ parent() }}
+{% endblock %}
+
+{% block body %}
+    <ol class="breadcrumb">
+        <li><a href="{{ path('BloggerBlogBundle_homepage') }}">Главная</a></li>
+        <li><a href="{{ path('BloggerBlogBundle_services') }}">Услуги</a></li>
+        <li><a href="{{ path('BloggerBlogBundle_projects') }}" class="active">Наши проекты</a></li>
+    </ol>
+
+    <div id="first-slider" style="background-image: url('/images/fon-slide.jpg');background-size: 100% auto;">
+        <h3 class="text-white-big" style="padding-top:3%;">
+            Наши работы</h3>
+        <div id="carousel-example-generic" class="carousel slide carousel-fade">
+            <!-- Indicators -->
+            <ol class="carousel-indicators" style="margin-bottom: 15px;">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+            </ol>
+
+
+            <div id="first-slider">
+                <div id="carousel-example-generic" class="carousel slide carousel-fade">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators" style="margin-bottom: 15px;">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <!-- Item 1 -->
+                        <div class="item active slide-content"
+                             style="background-image: url('/images/work-123.png'); background-size: 100% auto;">
+                            <div class="bg-overlay"></div>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="item slide-content"
+                             style="background-image: url('images/work-2.png'); background-size: 100% auto;">
+                            <div class="bg-overlay"></div>
+
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="item slide-content"
+                             style="background-image: url('images/work-3.png'); background-size: 100% auto;">
+                            <div class="bg-overlay"></div>
+
+                        </div>
+
+                        <!-- Item 4 -->
+                        <div class="item slide-content"
+                             style="background-image: url('images/work-4.png'); background-size: 100% auto;">
+                            <div class="bg-overlay"></div>
+
+                        </div>
+
+                        <!-- Item 5 -->
+                        <div class="item slide-content"
+                             style="background-image: url('images/work-5.png'); background-size: 100% auto;">
+                            <div class="bg-overlay"></div>
+
+                        </div>
+
+                    </div>
+                    <!-- End Wrapper for slides-->
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button"
+                       data-slide="prev">
+                        <i class="mdi mdi-chevron-left" style="color:white;"></i><span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button"
+                       data-slide="next">
+                        <i class="mdi mdi-chevron-right" style="color:white;"></i><span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- End Wrapper for slides-->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <i class="mdi mdi-chevron-left" style="color:white;"></i><span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <i class="mdi mdi-chevron-right" style="color:white;"></i><span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    </section>
+
+    <div class="row bg-gray-light">
+        <div class="container-fluid" style="margin-left: 10%; margin-right: 10%;">
+
+            <h2 class="text-black-big">
+                Наши кейсы</h2>
+            <div id="first-slider1">
+                <div id="carousel-example-generic1" class="carousel slide carousel-fade">
+
+
+                    <div id="first-slider1">
+                        <div id="carousel-example-generic1" class="carousel slide carousel-fade">
+                            <!-- Indicators -->
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <!-- Item 1 -->
+                                <div class="item active slide-content "
+                                     style="width:100%; left:0%; height: auto;">
+                                    <div class="col-md-6" style="margin-bottom:3%;">
+                                        <img src="/images/playmarket2.png" alt="foto" width="100%"
+                                             style="border: 4px dashed #808080; ">
+
+                                    </div>
+                                    <div class="col-md-6" style="margin-bottom:3%;">
+                                        <div class="" style="text-align:center; padding-top: 5%;">
+                                            <div style="padding-bottom: 3%;"><span class="fa fa-map-marker fa-2x"
+                                                                                   aria-hidden="true"
+                                                                                   style="padding-right: 5px;"></span>
+                                                <span class="home-text-cases">Регион продвижения: Минск</span>
+                                            </div>
+                                            <div style="padding-bottom: 3%;">
+                                            <span class="fa fa-star-o fa-2x" aria-hidden="true"
+                                                  style="padding-right: 5px;"></span>
+                                                <span class="home-text-cases">Тематика: Электроника</span></div>
+                                        </div>
+                                        <div class="col-md-6" style="padding-top:3%; padding-bottom:5%">
+                                            <div style="font-size: 30px; font-weight: 600; text-align: center; font-family: Century Gothic;">
+                                                0/мес
+                                            </div>
+                                            <div class="home-text-stat">Было</div>
+                                        </div>
+                                        <div class="col-md-6" style="padding-top:3%; padding-bottom:5%">
+                                            <div style="font-size: 30px; font-weight: 600; text-align: center; font-family: Century Gothic;">
+                                                8000/мес
+                                            </div>
+                                            <div class="home-text-stat">Стало</div>
+                                        </div>
+                                        <div>
+                                            <div class="col-md-6" style="text-align:center;  padding-top: 10px;">
+                                                <a class="left carousel-control" href="#carousel-example-generic1"
+                                                   role="button" data-slide="prev"
+                                                   style="background-image: none; position: relative; text-align: left; font-size: 15px;">
+                                                    <i class="mdi mdi-chevron-left"
+                                                       style="color:black; padding-right:5px;"></i><span
+                                                            style="text-align: left; font-size: 18px;">Предыдущий кейс</span>
+                                                </a>
+
+                                            </div>
+                                            <div class="col-md-6" style="text-align:center;  padding-top: 10px;">
+
+                                                <a class="right carousel-control" href="#carousel-example-generic1"
+                                                   role="button"
+                                                   data-slide="next"
+                                                   style="background-image: none; position: relative;text-align: right; font-size: 15px;">
+                                                    <span style="text-align: right; font-size: 18px;">Следующий кейс</span>
+                                                    <i class="mdi mdi-chevron-right"
+                                                       style="color:black; padding-left:5px;"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-overlay"></div>
+                                </div>
+                                <!-- Item 2 -->
+                                <div class="item slide-content" style="width:100%; left:0%; height: auto;">
+                                    <div class="col-md-6" style="margin-bottom:3%;">
+                                        <img src="/images/martial1.png" alt="foto" width="100%"
+                                             style="border: 4px dashed #808080; ">
+
+                                    </div>
+                                    <div class="col-md-6" style="margin-bottom:3%;">
+                                        <div class="" style="text-align:center; padding-top: 5%;">
+                                            <div style="padding-bottom: 3%;"><span class="fa fa-map-marker fa-2x"
+                                                                                   aria-hidden="true"
+                                                                                   style="padding-right: 5px;"></span>
+                                                <span class="home-text-cases">
+                         Регион продвижения: Беларусь
+                    </span>
+                                            </div>
+                                            <div style="padding-bottom: 3%;">
+                                            <span class="fa fa-star-o fa-2x" aria-hidden="true"
+                                                  style="padding-right: 5px;"></span>
+                                                <span class="home-text-cases">
+                         Тематика: Спортивная экипировка
+                    </span></div>
+                                        </div>
+                                        <div class="col-md-6" style="padding-top:3%; padding-bottom:5%">
+                                            <div style="font-size: 30px; font-weight: 600; text-align: center; font-family: Century Gothic;">
+                                                0/мес
+                                            </div>
+                                            <div class="home-text-stat">Было</div>
+                                        </div>
+                                        <div class="col-md-6" style="padding-top:3%; padding-bottom:5%">
+                                            <div style="font-size: 30px; font-weight: 600; text-align: center; font-family: Century Gothic;">
+                                                3200/мес
+                                            </div>
+                                            <div class="home-text-stat">Стало</div>
+                                        </div>
+                                        <div>
+                                            <div class="col-md-6" style="text-align:center;  padding-top: 10px;">
+                                                <a class="left carousel-control" href="#carousel-example-generic1"
+                                                   role="button" data-slide="prev"
+                                                   style="background-image: none; position: relative; text-align: left; font-size: 15px;">
+                                                    <i class="mdi mdi-chevron-left"
+                                                       style="color:black; padding-right:5px;"></i><span
+                                                            style="text-align: left; font-size: 18px;">Предыдущий кейс</span>
+                                                </a>
+
+                                            </div>
+                                            <div class="col-md-6" style="text-align:center;  padding-top: 10px;">
+
+                                                <a class="right carousel-control" href="#carousel-example-generic1"
+                                                   role="button"
+                                                   data-slide="next"
+                                                   style="background-image: none; position: relative;text-align: right; font-size: 15px;">
+                                                    <span style="text-align: right; font-size: 18px;">Следующий кейс</span>
+                                                    <i class="mdi mdi-chevron-right"
+                                                       style="color:black; padding-left:5px;"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-overlay"></div>
+
+
+                                </div>
+                                <!-- Item 3 -->
+                                <div class="item slide-content" style="width:100%; left:0%; height: auto;">
+                                    <div class="col-md-6" style="margin-bottom:3%;">
+                                        <img src="/images/sanit.png" alt="foto" width="100%"
+                                             style="border: 4px dashed #808080; ">
+
+                                    </div>
+                                    <div class="col-md-6" style="margin-bottom:3%;">
+                                        <div class="" style="text-align:center; padding-top: 5%;">
+                                            <div style="padding-bottom: 3%;"><span class="fa fa-map-marker fa-2x"
+                                                                                   aria-hidden="true"
+                                                                                   style="padding-right: 5px;"></span>
+                                                <span class="home-text-cases">
+                         Регион продвижения: Беларусь                    </span>
+                                            </div>
+                                            <div style="padding-bottom: 3%;">
+                                            <span class="fa fa-star-o fa-2x" aria-hidden="true"
+                                                  style="padding-right: 5px;"></span>
+                                                <span class="home-text-cases">
+                         Тематика: Сантехника
+                    </span></div>
+                                        </div>
+                                        <div class="col-md-6" style="padding-top:3%; padding-bottom:5%">
+                                            <div style="font-size: 30px; font-weight: 600; text-align: center; font-family: Century Gothic;">
+                                                0/мес
+                                            </div>
+                                            <div class="home-text-stat">Было</div>
+                                        </div>
+                                        <div class="col-md-6" style="padding-top:3%; padding-bottom:5%">
+                                            <div style="font-size: 30px; font-weight: 600; text-align: center; font-family: Century Gothic;">
+                                                9000/мес
+                                            </div>
+                                            <div class="home-text-stat">Стало</div>
+                                        </div>
+                                        <div>
+                                            <div class="col-md-6" style="text-align:center; padding-top: 10px;">
+                                                <a class="left carousel-control" href="#carousel-example-generic1"
+                                                   role="button" data-slide="prev"
+                                                   style="background-image: none; position: relative; text-align: left; font-size: 15px;">
+                                                    <i class="mdi mdi-chevron-left"
+                                                       style="color:black; padding-right:5px;"></i><span
+                                                            style="text-align: left; font-size: 18px;">Предыдущий кейс</span>
+                                                </a>
+
+                                            </div>
+                                            <div class="col-md-6" style="text-align:center;  padding-top: 10px;">
+
+                                                <a class="right carousel-control" href="#carousel-example-generic1"
+                                                   role="button"
+                                                   data-slide="next"
+                                                   style="background-image: none; position: relative;text-align: right; font-size: 15px;">
+                                                    <span style="text-align: right; font-size: 18px;">Следующий кейс</span>
+                                                    <i class="mdi mdi-chevron-right"
+                                                       style="color:black; padding-left:5px;"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-overlay"></div>
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row" style="border-top:1px solid #808080; margin-bottom:20px;">
+        <div class="container-fluid" style="margin-left: 2%; margin-right: 2%;">
+
+            <h2 class="text-black-big">
+                Нам доверяют:</h2>
+            <div style="text-align:center;">
+                <div class="col-md-2 our-clients" style="margin-bottom:2%;">
+                    <div class="" style="text-align:center">
+                        <img src="/images/logo/logo5.png" alt="foto" width="100%"
+                             style="/*border: 4px dashed #808080; */ padding: 5px;">
+                    </div>
+                </div>
+                <div class="col-md-2 our-clients" style="margin-bottom:2%;">
+                    <div class="" style="text-align:center">
+                        <img src="/images/logo/logo8.png" alt="foto" width="100%"
+                             style="/*border: 4px dashed #808080; */ padding: 5px;">
+                    </div>
+                </div>
+                <div class="col-md-2 our-clients" style="margin-bottom:2%;">
+                    <div class="" style="text-align:center">
+                        <img src="/images/logo/logo9.png" alt="foto" width="100%"
+                             style="/*border: 4px dashed #808080; */ padding: 5px;">
+                    </div>
+                </div>
+                <div class="col-md-2 our-clients" style="margin-bottom:2%;">
+                    <div class="" style="text-align:center">
+                        <img src="/images/logo/logo6.png" alt="foto" width="100%"
+                             style="/*border: 4px dashed #808080; */ padding: 5px;">
+                    </div>
+                </div>
+                <div class="col-md-2 our-clients" style="margin-bottom:2%;">
+                    <div class="" style="text-align:center">
+                        <img src="/images/logo/logo12.jpg" alt="foto" width="100%"
+                             style="/*border: 4px dashed #808080; */ padding: 5px;">
+                    </div>
+                </div>
+                <div class="col-md-2 our-clients" style="margin-bottom:2%;">
+                    <div class="" style="text-align:center">
+                        <img src="/images/logo/logo11.png" alt="foto" width="100%"
+                             style="/*border: 4px dashed #808080; */ padding: 5px;">
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <div class="col-md-2 our-clients" style="margin-bottom:2%;">
+                    <div class="" style="text-align:center">
+                        <img src="/images/logo/logo1.png" alt="foto" width="100%"
+                             style="/*border: 4px dashed #808080; */ padding: 5px;">
+                    </div>
+                </div>
+                <div class="col-md-2 our-clients" style="margin-bottom:2%;">
+                    <div class="" style="text-align:center">
+                        <img src="/images/logo/logo13.png" alt="foto" width="100%"
+                             style="/*border: 4px dashed #808080; */ padding: 5px;">
+                    </div>
+                </div>
+                <div class="col-md-2 our-clients" style="margin-bottom:2%;">
+                    <div class="" style="text-align:center">
+                        <img src="/images/logo/logo14.jpg" alt="foto" width="100%"
+                             style="/*border: 4px dashed #808080; */ padding: 5px;">
+                    </div>
+                </div>
+                <div class="col-md-2 our-clients" style="margin-bottom:2%;">
+                    <div class="" style="text-align:center">
+                        <img src="/images/logo/logo15.jpg" alt="foto" width="100%"
+                             style="/*border: 4px dashed #808080; */ padding: 5px;">
+                    </div>
+                </div>
+                <div class="col-md-2 our-clients" style="margin-bottom:2%;">
+                    <div class="" style="text-align:center">
+                        <img src="/images/logo/logo4.png" alt="foto" width="100%"
+                             style="/*border: 4px dashed #808080; */ padding: 5px;">
+                    </div>
+                </div>
+                <div class="col-md-2 our-clients" style="margin-bottom:2%;">
+                    <div class="" style="text-align:center">
+                        <img src="/images/logo/logo2.png" alt="foto" width="100%"
+                             style="/*border: 4px dashed #808080; */ padding: 5px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Form Section-->
+    <section class="section bg-gray-light" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4" style="text-align:center;">
+                    {#<i class="fa fa-quote-left fa-3x" aria-hidden="true"></i>#}
+
+
+                    <div id="first-slider">
+                        <h3 style="color: black; font-size: 20px; text-transform: uppercase; text-align: center; font-family: Century Gothic; font-weight: 500;">
+                            Немного мотивации</h3>
+                        <div id="carousel-example-generic" class="carousel slide carousel-fade">
+
+
+                            <div id="first-slider">
+                                <div id="carousel-example-generic" class="carousel slide carousel-fade">
+                                    <!-- Indicators -->
+
+                                    <!-- Wrapper for slides -->
+                                    <div class="carousel-inner" role="listbox">
+                                        <!-- Item 1 -->
+                                        <div class="item active slide-content " style="width:100%; left:0%; height: auto;">
+                                            <p class="quote-2"><i>Для нас не должно существовать никаких пределов</i></p>
+                                            <p style="margin-top:7%;text-align:center;">Ричард Бах</br>Философ и психолог</p>
+
+                                            <div class="bg-overlay"></div>
+                                        </div>
+                                        <!-- Item 2 -->
+                                        <div class="item slide-content" style="width:100%; left:0%; height: auto;">
+                                            <p class="quote-2"><i>Вы не будете расти, если не будете пытаться сделать что-то за пределами того, что вы уже знаете в совершенстве.</i></p>
+                                            <p style="margin-top:7%;text-align:center;">Уильям Джеймс</br>Писатель и философ</p>
+
+                                            <div class="bg-overlay"></div>
+
+
+                                        </div>
+                                        <!-- Item 3 -->
+                                        <div class="item slide-content" style="width:100%; left:0%; height: auto;">
+                                            <p class="quote-2"><i>Для нас не должно существовать никаких пределов</i></p>
+                                            <p style="margin-top:7%;text-align:center;">Ричард Бах</br>Писатель и философ</p>
+
+                                            <div class="bg-overlay"></div>
+
+                                        </div>
+
+                                        <!-- Indicators -->
+                                        <ol class="carousel-indicators" style="position:relative; margin-top: 30px;">
+                                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+
+                                        </ol>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+                <div class="col-md-8">
+                    <div class="text-center">
+                        <h3 style="margin-bottom:10px; font-size: 20px; text-transform: uppercase;">Остались вопросы?</h3>
+                        <img src="images/title-border.png" alt="" class="img-responsive center-block"/>
+                        <p class="sub-title text-muted">Заполните форму обратной связи и наши специалисты свяжутся с
+                            вами в ближайшее время.</p>
+                    </div>
+
+
+                    <form>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="username" placeholder="Имя" required/>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="useremail" placeholder="Ваш Email"
+                                           required/>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" id="subject" placeholder="Тема" required/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                            <textarea class="form-control" rows="5" id="message"
+                                      placeholder="Сообщение...."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 text-right">
+                                <input type="submit" class="submitBnt btn btn-custom" value="Отправить сообщение"
+                                       style="color:black;">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--END FORM-->
+{% endblock %}

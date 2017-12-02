@@ -1,13 +1,94 @@
 {# src/Blogger/BlogBundle/Resources/views/Page/about.html.twig #}
 {% extends 'BloggerBlogBundle::layout.html.twig' %}
 
-{% block title %}About{% endblock%}
+{% block title %}About{% endblock %}
 
 {% block body %}
-    <header>
-        <h1>About New-line</h1>
-    </header>
-    <article>
-        <p>Today, it's not a secret to anyone how important it is to have a website in the 21st century and why it needs to be promoted in the search engines. The presence of the site not only positively influences the image of the company, speaking about its stability and serious approach to business, but it is an excellent indicator of the company's high level of development, allows it to outstrip competitors by several steps, raises users' confidence in products or services.</p>
-    </article>
+    <ol class="breadcrumb" style="background-color: white;">
+        <li><a href="#">Главная</a></li>
+        <li><a href="#" class="active">О нас</a></li>
+    </ol>
+    <div class="row" style="background-color: #f5f5f7; padding-bottom: 3%;">
+        <div class="container-fluid">
+
+            <h1 style="text-align: center; padding-bottom: 3%; font-size: 32px;">
+                Что такое New-line?
+            </h1>
+            <div class="col-md-push-2 col-md-8">
+            <p class="home-o-nas " style="color:black;">Сегодня ни для кого не секрет, как важно в
+                21 веке иметь свой сайт и почему необходимо его продвижение в поисковых системах. Наличие сайта не
+                только положительно влияет на имидж компании, говоря о ее стабильности и серьезном подходе к делу, но
+                является отличным показателем высокого уровня развития компании, позволяет опережать на несколько шагов
+                конкурентов, вызывает доверие пользователей к продукции или услугам.</p>
+            <p class="home-o-nas" style="color:black; margin-top: 3%;">Профессиональная New-Line студия
+                занимается созданием и продвижением сайтов в интернете. Мы создаем только уникальные проекты,
+                начиная с сайта-визитки, заканчивая крупными порталами. Качественная работа в совокупности с
+                постоянными и эффективными разработками позволяют нам создавать лучшие проекты в самые короткие
+                сроки.</p></div>
+            <div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <section class="section bg-custom" style="background-image: url('/images/about.jpg');background-size: 100% auto;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 text-white purchase-desc" style="text-align: center;">
+                    New-line - будь как мы, будь лучшим!
+                </div>
+                <div class="col-md-3" style="text-align: center;">
+                    <a href="#" class="btn btn-white">Заказать звонок</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <div class="row">
+        <div class="container-fluid" style="margin-left: 10%; margin-right: 10%;">
+
+            <h2 class="text-black-big">
+                Успех и преимущества создания сайта и его продвижения в студии New-Line</h2>
+
+            <div class="col-md-4" style="margin-bottom:7%;">
+                <div class="" style="text-align:center">
+                    <div class="fa fa-bomb fa-5x" aria-hidden="true" style="padding-bottom: 10%"></div>
+
+                    <div class="home-text-stat">
+                        Работа без штампов
+                    </div>
+                    <p>Каждый проект для нас единственен в своем роде и уникален. Индивидуальный подход к каждому клиенту гарантирует высокий результат</p>
+                </div>
+            </div>
+            <div class="col-md-4" style="margin-bottom:7%;">
+                <div class="" style="text-align:center">
+                    <div class="fa fa-check fa-5x" aria-hidden="true" style="padding-bottom: 10%"></div>
+                    <div class="home-text-stat">
+                        Качественное выполнение работы
+                    </div>
+                    <p>Все наши проекты выполнены на совесть. Результаты нашей работы - это десятки довольных клиентов!
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4" style="margin-bottom:7%;">
+                <div class="" style="text-align:center">
+                    <div class="fa fa-commenting-o fa-5x" aria-hidden="true" style="padding-bottom: 10%"></div>
+                    <div class="home-text-stat">
+                        Гарантированная техническая поддержка
+
+                    </div>
+                    <p>В течении выполнения конкретной работы и после мы оказываю профессиональную техническую поддержку
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
 {% endblock %}
