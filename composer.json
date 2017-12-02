@@ -23,8 +23,7 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "doctrine/doctrine-fixtures-bundle": "dev-master",
         "doctrine/data-fixtures" : "dev-master",
-        "doctrine/doctrine-migrations-bundle": "dev-master",
-        "doctrine/migrations": "dev-master",
+
         "symfony/assetic-bundle": "dev-master",
         "sonata-project/admin-bundle": "^3.21",
         "sonata-project/doctrine-orm-admin-bundle": "^3.1",
