@@ -30,15 +30,35 @@ line-height: 40px;}
 .header-logo a {
     color:white;
 }
-.social-icons-header {
-width: 30px;
-border: 3px solid #FFFFFF;
-height: 30px;
--moz-border-radius: 50px;
--webkit-border-radius: 50px;
-color: #fff;
-font-size: 15px;
-margin-right: 3px;
-text-align: center;
+
+@media (min-width: 1260px) {
+    .social-icons-header {
+        width: 30px;
+        border: 3px solid #FFFFFF;
+        height: 30px;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        color: #fff;
+        font-size: 15px;
+        margin-right: 3px;
+        text-align: center;
+        cursor: pointer;
+        line-height: 25px;
+    }
+}
+
+@media (max-width:768px) {
+    .social-icons-header
+{
+    width: 25px;
+    border: 2px solid #FFFFFF;
+    height: 25px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    color: #fff;
+    font-size: 15px;
+    margin-right: 3px;
+    text-align: center;
     cursor: pointer;
-line-height: 25px;}
+    line-height: 22px;
+}}

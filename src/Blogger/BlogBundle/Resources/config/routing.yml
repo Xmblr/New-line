@@ -24,7 +24,6 @@ BloggerBlogBundle_blog:
     defaults: { _controller: "BloggerBlogBundle:Blog:blog" }
     requirements:
         methods:  GET
-
 BloggerBlogBundle_blog_show:
     path:  /blog/{id}/{slug}
     defaults: { _controller: "BloggerBlogBundle:Blog:show", comments: true }

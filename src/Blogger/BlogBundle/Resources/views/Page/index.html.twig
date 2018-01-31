@@ -38,10 +38,21 @@
             <h2 style="padding-bottom:40px; ">{% block blog_title %}<a href="{{ path('BloggerBlogBundle_homepage') }}">
                         NEW</br><span class="slogan-line">line</span></a>{% endblock %}</h2>
 
-            <a class="boot">Заказать звонок</a>
+            <a class="boot">
+                <span>Заказать звонок</span></a>
         </hgroup>
 
-        <!--START NAVBAR-->
+
+
+    </header>
+    <!--START NAVBAR-->
+
+    <!--END NAVBAR-->
+{% endblock %}
+
+{% block body %}
+
+    <div class="sticky">
         <div class="navbar navbar-custom sticky" role="navigation" style="text-align:center;">
 
             <!-- Navbar-header -->
@@ -57,9 +68,11 @@
             </div>
             <!-- end navbar-header -->
 
+
+
             <!-- menu -->
             <div class="navbar-collapse collapse" id="data-scroll">
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right" style="margin-top:0px;">
                     <li class="active">
                         <a href="{{ path('BloggerBlogBundle_homepage') }}">Главная</a>
                     </li>
@@ -84,38 +97,31 @@
 
             <!-- end container -->
         </div>
-        <!--END NAVBAR-->
-
-    </header>
-{% endblock %}
-
-{% block body %}
-
-
+    </div>
 
     <div class="row">
         <div class="container-fluid">
-            <div class="col-md-4" style="margin-bottom:2%;">
-                <div class="square">
+            <div class="col-md-4" style="margin-bottom:7%;">
+                <a href="{{ path('BloggerBlogBundle_create') }}"><div class="square">
 
                     <span class="block1" style="display:table-cell!important; vertical-align:middle;">
-                Создание и доработка сайтов
+                        Создание и доработка сайтов
                     </span>
-                </div>
+                    </div></a>
             </div>
-            <div class="col-md-4" style="margin-bottom:2%;">
-                <div class="square">
+            <div class="col-md-4" style="margin-bottom:7%;">
+                <a href="{{ path('BloggerBlogBundle_seo') }}"><div class="square">
                     <span class="block2" style="display:table-cell!important; vertical-align:middle;">
-                Продвижение сайтов
+                        Продвижение сайтов
                     </span>
-                </div>
+                    </div></a>
             </div>
-            <div class="col-md-4" style="margin-bottom:2%;">
-                <div class="square">
+            <div class="col-md-4" style="margin-bottom:7%;">
+                <a href="{{ path('BloggerBlogBundle_support') }}"><div class="square">
                     <span class="block3" style="display:table-cell!important; vertical-align:middle;">
-                Ведение и поддержка сайтов
+                       Ведение и поддержка сайтов
                     </span>
-                </div>
+                    </div></a>
             </div>
         </div>
     </div>
@@ -570,8 +576,6 @@
             </div>
         </div>
     </div>
-
-
 
 
 {% endblock %}

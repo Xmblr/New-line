@@ -35,16 +35,17 @@ body {
 }
 h1,h2,h3,h4,h5,h6 {
     font-family: Century Gothic;
-
+    margin-top: 2%;
+    margin-bottom:3%;
+    text-align: center;
 }
 h1 {
     font-size: 30px;
     text-align:center;
-    padding-bottom: 3%;
 }
 
 h3 {
-    padding-bottom: 3%; color: black; font-size: 20px; text-transform: uppercase;
+    color: black; font-size: 18px; text-transform: uppercase;
 }
 a,a:hover,a:focus {
     text-decoration: none !important;
@@ -52,7 +53,8 @@ a,a:hover,a:focus {
 }
 
 p {
-    font-size: 17px;
+    font-size: 15px;
+    line-height: 20px;
 }
 /*====================
   2.Helper
@@ -387,7 +389,7 @@ p {
     padding: 20px 0px;
     width: 100%;
     border-radius: 0px;
-    z-index: 999;
+    z-index: 10;
     margin-bottom: 0px;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
@@ -401,7 +403,7 @@ p {
 }
 
 .navbar-nav {
-    margin-top: 10px;
+    margin-top: 20px;
     display: inline-block;
 }
 
@@ -411,17 +413,16 @@ p {
     color: #ffffff !important;
     text-transform: uppercase;
 }
-.navbar-custom .navbar-nav li a {
+@media (min-width:1260px) {.navbar-custom .navbar-nav li a {
     color: black;
-    font-size: 13px;
     border-bottom: 3px solid transparent;
     background-color: transparent !important;
-    margin: 0 8px;
+    /*margin: 0 8px;*/
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    /*letter-spacing: 0.05em;*/
     font-family: Century Gothic;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 17px;
 }
 }
 .navbar-custom>.container-fluid{
@@ -1161,6 +1162,7 @@ p {
     }
     .form-control{
         height:45px;
+        width: 100%;
     }
     .slide-title{
         font-size: 32px;
@@ -1288,4 +1290,20 @@ ul.pattern .color8 {
     #style-switcher {
         display: none;
     }
+}
+
+h2 {
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.block-content {
+    padding: 20px 15px;
+    margin: 0px 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 25px 0 rgba(55, 66, 73, 0.2);
+    border-radius:4px; border: 1px solid black;
+}
+.block-content:hover {
+    transform: scale(1.02);
 }

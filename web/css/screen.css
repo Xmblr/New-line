@@ -61,8 +61,6 @@ body {
 }
 
 #header {
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 20px;
 
 }
 
@@ -205,7 +203,7 @@ hgroup:hover {
 
 .square {
     width: 250px;
-    border: 3px solid #000000;
+    border: 2px solid #d8d8d8;
     height: 250px;
     color: black;
     font-size: 25px;
@@ -307,7 +305,6 @@ hgroup:hover {
 .home-o-nas {
     color: white;
     font-size: 20px;
-    text-transform: uppercase;
     text-align: center;
     font-family: Century Gothic;
     font-weight: 500;
@@ -516,15 +513,60 @@ hgroup:hover {
     text-align:center;
 }
 
-@media (min-width:468px){
+@media (min-width:768px){
 .icon-social-mobile {
 display:none;}
 }
 
-@media (max-width:468px){
+@media (max-width:767px){
     .icon-social-desktop {
         display:none;}
 }
+
+@media (min-width:768px) and (max-width:1260px){
+    .navbar-nav > li > a {
+        border-bottom: 3px solid transparent;
+        background-color: transparent !important;
+        text-transform: uppercase;
+        font-family: Century Gothic;
+        font-weight: 500;
+        font-size: 13px;}
+}
+
+@media (min-width:1260px) {
+    .icon-social-desktop {
+        margin: 2.2% auto;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+}
+@media (min-width:768px) and (max-width:1260px){
+    .icon-social-desktop {margin: 3.0% auto;}
+    .social-icons-header {
+        width: 25px;
+        border: 2px solid #FFFFFF;
+        height: 25px;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        color: #fff;
+        font-size: 15px;
+        margin-right: 3px;
+        text-align: center;
+        cursor: pointer;
+        line-height: 22px;
+    }
+}
+
+.icon-social-mobile {
+    margin: 1.8% auto;
+    display: inline-block;
+    margin-right: 15px;
+    padding-left: 5px;
+    float: right;
+
+
+}
+
 
 .navbar-toggle-mobile {
     position: relative;
@@ -540,4 +582,417 @@ display:none;}
 
     color: #ffffff;
 }
+
+.sticky {
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    border-bottom:1px solid #ccc;
+    background: white;
+    z-index:1000;
+}
+
+.block1:hover {box-shadow: 8px 8px 35px 0 rgba(0,0,0,0.15)}
+
+.element-single {
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.an-small-title
+{
+    font-size: 15px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+}
+.an-custom-checkbox label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 25px;
+    font-size: 15px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    transition: all 0.3s ease;
+}
+
+.an-custom-checkbox.dark-text.radio input[type="radio"]:checked + label {
+    color: #374249;
+}
+
+.an-custom-checkbox input[type="checkbox"]:checked + label:before, .an-custom-checkbox input[type="radio"]:checked + label:before {
+    content: "\f1db";
+    font-family: "FontAwesome";
+    color: #ccc;
+}
+
+.an-custom-checkbox label:before {
+    content: "\f1db";
+    font-family: "FontAwesome";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 15px;
+    color: #ccc;
+    font-size: 18px;
+}
+
+.an-custom-checkbox input {
+    display: none;
+}
+
+.an-custom-checkbox.radio input[type="radio"]:checked + label:before {
+    content: "\f111";
+}
+
+.price-result {
+    border-bottom: 3px solid #ccc;
+    text-align: center;
+    margin: 20px 0px;
+    display: inline-block;
+}
+
+.pricing-table__item-price {
+    font-family: "Space Mono", Menlo, Monaco, Consolas, "Courier New", monospace;
+    color: #151515;
+}
+
+.pricing-table__item-price {
+    margin-top: 22px;
+}
+
+.pricing-table__item-price-currency {
+    position: relative;
+    top: -2px;
+    left: -2px;
+    font-size: 24px;
+    vertical-align: top;
+}
+
+.pricing-table__item-price > * {
+     display: inline-block;
+ }
+
+.pricing-table__item-price-value {
+    font-size: 60px;
+    line-height: 1;
+}
+
+.pricing-table__item-price-aside {
+    position: relative;
+    top: -4px;
+}
+
+.pricing-table__item-price-aside .top {
+    font-size: 24px;
+}
+.pricing-table__item-price-aside > * {
+    display: block;
+    margin-bottom: 3px;
+    line-height: 1;
+}
+
+.pricing-table__item-price-aside .bottom {
+    font-size: 16px;
+}
+.pricing-table__item-price-aside > * {
+    display: block;
+    margin-bottom: 3px;
+    line-height: 1;
+}
+
+@media (min-width: 768px) {
+    .border-left-1 {
+        border-left: 3px dashed #ccc;
+    }
+}
+
+@media (min-width: 768px){
+    .navbar-collapse.collapse {
+        display: block !important;
+        height: auto !important;
+        padding-bottom: 0;
+        overflow: visible !important;
+        text-align: center;
+    }}
+
+.navbar-collapse {
+    padding-right: 0px;
+    padding-left: 15px; }
+
+.seo-calculator {
+    position: fixed;
+    width: 62px;
+    height: 64px;
+    right: 0;
+    top: 70%;
+    z-index: 10;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 5px;
+    -webkit-transition: All 0.5s ease;
+    -moz-transition: All 0.5s ease;
+    -o-transition: All 0.5s ease;
+    -ms-transition: All 0.5s ease;
+    transition: All 0.5s ease;
+    overflow: hidden;
+    cursor:pointer;
+
+
+}
+
+.seo-calculator:hover {
+
+    width: 200px;
+}
+
+
+
+
+.btn-infographic {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 3px solid #ccc;
+    padding: 9px 28px;
+}
+
+/*.infographic-block {*/
+    /*display: block;*/
+/*margin-bottom: 0;*/
+/*font-weight: normal;*/
+/*line-height: 1.42857143;*/
+/*text-align: center;*/
+/*vertical-align: middle;*/
+/*-ms-touch-action: manipulation;*/
+/*touch-action: manipulation;*/
+/*cursor: pointer;*/
+/*-webkit-user-select: none;*/
+/*-moz-user-select: none;*/
+/*-ms-user-select: none;*/
+/*user-select: none;*/
+/*background-image: none;*/
+/*border: 1px solid black;*/
+/*padding: 9px 28px;*/
+/*}*/
+
+/*.infographic-block:after {*/
+    /*position:absolute;*/
+    /*top:40%;*/
+    /*border: 20px solid transparent;*/
+    /*border-left: 20px solid black;*/
+    /*content: '';*/
+/*}*/
+
+.infographic-block  {
+    padding: 20px;
+    margin-top: 30px;
+    position: relative;
+    color: black;
+    border: 3px solid #ccc;
+    right:5%;
+    display: inline-block;
+    float:right;
+}
+.infographic-block:after {
+    content: '';
+    position: absolute;
+    /* right: 20px; */
+    bottom: 50%;
+    border: 10px solid transparent;
+    border-left: 15px solid #ccc;
+    right: -28px;
+}
+
+.infographic-block-title  {
+    padding: 20px;
+    position: relative;
+    color: black;
+    border: 3px solid #ccc;
+    display: inline-block;
+    margin-top: 11%;
+    float: left;
+    left: 30px;
+}
+
+
+.infographic-block-title:before {
+    float: left;
+    left: -33px;
+    content: '';
+    position: absolute;
+    border-top-color: rgb(204, 204, 204);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-color: rgb(204, 204, 204);
+    border-right-style: solid;
+    border-right-width: 3px;
+    border-bottom-color: rgb(204, 204, 204);
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-left-color: rgb(204, 204, 204);
+    border-left-style: solid;
+    border-left-width: 30px;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    top: 48%;
+}
+
+.infographic-block-left  {
+    padding: 20px;
+    position: relative;
+    color: black;
+    border: 3px solid #ccc;
+    display: inline-block;
+    margin-top: 10%;
+    float: right;
+    right: 45px;
+}
+
+
+.infographic-block-left:before {
+    float: left;
+    right: -50px;
+    content: '';
+    position: absolute;
+    border-top-color: rgb(204, 204, 204);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-color: rgb(204, 204, 204);
+    border-right-style: solid;
+    border-right-width: 47px;
+    border-bottom-color: rgb(204, 204, 204);
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-left-color: rgb(204, 204, 204);
+    border-left-style: solid;
+    border-left-width: 3px;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    top: 48%;
+}
+
+.infographic-block-right  {
+    padding: 20px;
+    margin-top: 38px;
+    position: relative;
+    color: black;
+    border: 3px solid #ccc;
+    left:5%;
+    display: inline-block;
+    float:left;
+}
+.infographic-block-right:before {
+    content: '';
+    position: absolute;
+    /* right: 20px; */
+    bottom: 37%;
+    border: 10px solid transparent;
+    border-right: 15px solid #ccc;
+    left: -28px;
+}
+
+.infographic-bottom  {
+    padding: 20px;
+    margin-top: 60px;
+    position: relative;
+    color: black;
+    border: 3px solid #ccc;
+    right:5%;
+    display: inline-block;
+    float:right;
+}
+.infographic-bottom:after {
+    content: '';
+    position: absolute;
+    /* right: 20px; */
+    bottom: 29%;
+    border: 10px solid transparent;
+    border-left: 15px solid #ccc;
+    right: -28px;
+}
+
+.infographic-block li, .infographic-bottom li, .infographic-block-right li {
+    font-size: 17px;
+}
+
+@media (max-width: 768px) {
+    .infographic-desktop {
+    display:none;}
+}
+
+.seo-arrow:after {
+    content: '\f061';
+    font-family: fontawesome;
+    position: absolute;
+    right: -5px;
+    top: 30%;
+    color: white;
+    font-size: 1.5em;
+}
+
+@media (max-width: 768px) {
+    .seo-arrow:after {
+        content: '';
+    }
+}
+
+.seo-mail {
+    position: fixed;
+    width: 62px;
+    height: 64px;
+    right: 0;
+    top: 60%;
+    z-index: 10;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 5px;
+    -webkit-transition: All 0.5s ease;
+    -moz-transition: All 0.5s ease;
+    -o-transition: All 0.5s ease;
+    -ms-transition: All 0.5s ease;
+    transition: All 0.5s ease;
+    overflow: hidden;
+    cursor:pointer;
+}
+
+.seo-mail:hover {
+    width: 200px;
+}
+
+.text-left {
+    text-align: center;
+    width: 120px;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 18px;
+    height: 53px;
+    overflow: hidden;
+    position: relative;
+
 }

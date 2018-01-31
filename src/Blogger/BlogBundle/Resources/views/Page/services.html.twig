@@ -8,34 +8,36 @@
 {% endblock %}
 
 {% block body %}
-        <ol class="breadcrumb">
-        <li><a href="#">Главная</a></li>
-        <li><a href="#" class="active">Услуги</a></li>
+
+    <ol class="breadcrumb"  xmlns:v="http://rdf.data-vocabulary.org/#">
+        <li typeof="v:Breadcrumb"><a href="{{ path('BloggerBlogBundle_homepage') }}" rel="v:url" property="v:title">Главная</a></li>
+        <li>Услуги</li>
     </ol>
+
     <div class="row">
         <div class="container-fluid">
             <h1 style="text-align: center; padding-bottom: 3%; font-size: 32px;">Наши услуги</h1>
             <div class="col-md-4" style="margin-bottom:7%;">
-                <div class="square">
+                <a href="{{ path('BloggerBlogBundle_create') }}"><div class="square">
 
                     <span class="block1" style="display:table-cell!important; vertical-align:middle;">
-                Создание и доработка сайтов
+                        Создание и доработка сайтов
                     </span>
-                </div>
+                </div></a>
             </div>
             <div class="col-md-4" style="margin-bottom:7%;">
-                <div class="square">
+                <a href="{{ path('BloggerBlogBundle_seo') }}"><div class="square">
                     <span class="block2" style="display:table-cell!important; vertical-align:middle;">
-                Продвижение сайтов
+                        Продвижение сайтов
                     </span>
-                </div>
+                </div></a>
             </div>
             <div class="col-md-4" style="margin-bottom:7%;">
-                <div class="square">
+                <a href="{{ path('BloggerBlogBundle_support') }}"><div class="square">
                     <span class="block3" style="display:table-cell!important; vertical-align:middle;">
-                Ведение и поддержка сайтов
+                       Ведение и поддержка сайтов
                     </span>
-                </div>
+                </div></a>
             </div>
         </div>
     </div>
