@@ -95,7 +95,7 @@ hgroup:hover {
 }
 
 #header h2 {
-    padding-top: 80px;
+    padding-top: 50px;
     font-family: 'Broadway', cursive;
     font-size: 92px;
     text-align: center;
@@ -476,7 +476,7 @@ hgroup:hover {
     text-align: center;
     font-family: Century Gothic;
     font-weight: 500;
-    padding-bottom: 3%;
+
 }
 
 .text-white {
@@ -733,8 +733,8 @@ display:none;}
     width: 62px;
     height: 64px;
     right: 0;
-    top: 70%;
-    z-index: 10;
+    top: 50%;
+    z-index: 1;
     background: white;
     border: 1px solid #ccc;
     padding: 5px;
@@ -968,7 +968,7 @@ display:none;}
     height: 64px;
     right: 0;
     top: 60%;
-    z-index: 10;
+    z-index: 1;
     background: white;
     border: 1px solid #ccc;
     padding: 5px;
@@ -985,6 +985,30 @@ display:none;}
     width: 200px;
 }
 
+
+.phone-call {
+    position: fixed;
+    width: 62px;
+    height: 64px;
+    right: 0;
+    top: 70%;
+    z-index: 1;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 5px;
+    -webkit-transition: All 0.5s ease;
+    -moz-transition: All 0.5s ease;
+    -o-transition: All 0.5s ease;
+    -ms-transition: All 0.5s ease;
+    transition: All 0.5s ease;
+    overflow: hidden;
+    cursor:pointer;
+}
+
+.phone-call:hover {
+    width: 200px;
+}
+
 .text-left {
     text-align: center;
     width: 120px;
@@ -995,4 +1019,9 @@ display:none;}
     overflow: hidden;
     position: relative;
 
+}
+
+a.btn-hover:hover {
+    transform: scale(1.03);
+    transition: all .5s ease;
 }

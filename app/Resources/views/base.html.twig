@@ -15,6 +15,7 @@
         <link href="{{ asset('css/button.css') }}" type="text/css" rel="stylesheet"/>
         <link href="{{ asset('css/header.css') }}" type="text/css" rel="stylesheet"/>
         <link href="{{ asset('css/popup.css') }}" type="text/css" rel="stylesheet"/>
+        <link href="{{ asset('css/pricing.css') }}" type="text/css" rel="stylesheet"/>
         <link href=’http://fonts.googleapis.com/css?family=Ruslan+Display&subset=cyrillic,latin’ rel=’stylesheet’
               type=’text/css’>
         <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css"/>
@@ -163,6 +164,46 @@
                 <!-- end container -->
             </div>
             <!--END NAVBAR-->
+
+
+
+            {#Заявка на создание сайта#}
+            <a href="#win3">
+                <div class="phone-call">
+                    <img src="/images/phone.png" height="53px"/>
+                    <span class="text-left" style="font-size:15px;">Заказать обратный звонок</span>
+                </div>
+            </a>
+
+            <a href="#x" class="overlay" id="win3">
+            </a>
+            <div class="popup" style="max-width:500px; text-align:center;">
+                <div class="section bg-gray-light container-fluid" style="padding-top: 10px; padding-bottom: 10px; padding:0%;">
+                    <h2>Заказ обратного звонка</h2>
+                    <div class="container-fluid">
+
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="username" placeholder="Как вас зовут?"
+                                   required/>
+                        </div>
+                        <div class="form-group">
+
+                            <input type="text" class="form-control" id="subject" placeholder="Номер телефона" required/>
+                        </div>
+                        <a href="#" class="btn" style="border: 1px solid black; text-align: center;">Отправить</a>
+                    </div>
+                </div>
+
+                <a class="close" title="Закрыть" href="#close"></a>
+            </div>
+            {#Заявка на создание сайта#}
+
+
+
+
+
+
         {% endblock %}
     </section>
 

@@ -7,6 +7,72 @@
 {% endblock %}
 
 {% block body %}
+
+    {#Заявка на поддержку сайта#}
+    <a href="#win5">
+        <div class="seo-mail">
+            <img src="/images/seo-mail.png" height="53px"/>
+            <span class="text-left" style="font-size:15px;">Заявка на поддержку сайта</span>
+        </div>
+    </a>
+
+    <a href="#x" class="overlay" id="win5">
+    </a>
+    <div class="popup" style="max-width:500px; text-align:center;">
+        <div class="section bg-gray-light container-fluid" style="padding-top: 10px; padding-bottom: 10px; padding:0%;">
+            <h2>Заявка на поддержку сайта</h2>
+            <div class="container-fluid">
+
+
+                <div class="an-small-title" style="text-align:left;">Пакет</div>
+
+                <div class="element-single">
+
+            <span class="an-custom-checkbox radio dark-text">
+                    <input type="radio" name="name" id="check-1">
+                    <label for="check-1">Мини (2 часа)</label>
+                  </span>
+                    <span class="an-custom-checkbox radio dark-text">
+                    <input type="radio" name="name" id="check-2">
+                    <label for="check-2">Стандарт (8 часов)</label>
+                  </span>
+                    <span class="an-custom-checkbox radio dark-text">
+                    <input type="radio" name="name" id="check-3">
+                    <label for="check-3">Оптимальный (24 часа)</label>
+                  </span>
+                    <span class="an-custom-checkbox radio dark-text">
+                    <input type="radio" name="name" id="check-4">
+                    <label for="check-4">Максимум (40 часов)</label>
+                  </span>
+                    <span class="an-custom-checkbox radio dark-text">
+                    <input type="radio" name="name" id="check-4">
+                    <label for="check-4">Дополнительный пакет (30 минут)</label>
+                  </span>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" id="username" placeholder="Ваше имя"
+                           required/>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="useremail" placeholder="Ваш Email"
+                           required/>
+                </div>
+                <div class="form-group">
+
+                    <input type="text" class="form-control" id="subject" placeholder="Номер телефона" required/>
+                </div>
+                <a href="#" class="btn" style="border: 1px solid black; text-align: center;">Отправить</a>
+            </div>
+        </div>
+
+        <a class="close" title="Закрыть" href="#close"></a>
+    </div>
+    {#Заявка на поддержку сайта#}
+
+
+
+
     <ol class="breadcrumb" style="background-color: white;">
         <li><a href="{{ path('BloggerBlogBundle_homepage') }}">Главная</a></li>
         <li><a href="{{ path('BloggerBlogBundle_services') }}" class="active">Услуги</a></li>
@@ -15,7 +81,7 @@
     <div class="row" style="background-color: white;">
         <div class="container-fluid">
 
-            <h1 style="text-align: center; padding-bottom: 3%; font-size: 32px;">
+            <h1 style="text-align: center; font-size: 32px;">
                 Поддержка сайтов
             </h1>
             <div class="col-md-push-2 col-md-8" style="text-align: center;">
@@ -30,7 +96,7 @@
                     услуги. Мы гарантируем оперативное выполнение всех задач, а также решение возникших проблем.
                 </p>
 
-                <a href="#" class="btn" style="border: 1px solid black;">Заявка на поддержку сайта</a>
+                <a href="#win5" class="btn btn-hover" style="border: 1px solid black;">Заявка на поддержку сайта</a>
 
             </div>
         </div>
@@ -105,231 +171,371 @@
 
 
 
+    <div class="container-fluid bg-decoration-content">
+        <div class="row">
+            <div class="text-center">
+                <h3 class="text-black-big">Пакеты на поддержку сайта</h3>
 
-    <section class="section" id="pricing">
-        <div class="container">
+            </div>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="col-md-push-1 col-md-10">
+                <div class="row row-40 align-items-md-end">
+                    <div class="col-md-3 price-width">
+                        <div class="pricing-table">
+                            <div class="pricing-table-body">
+                                <h5 class="pricing-table-header">Мини</h5>
 
 
-            <h3 class="text-black-big" style="padding-top:3%;">Пакеты на поддержку сайта</h3>
+                                <div class="pricing-table__item-price">
+                                    <span class="pricing-table__item-price-value">60</span>
+                                    <div class="pricing-table__item-price-aside"><span class="top">руб</span>
+                                    </div>
+                                </div>
+                                <div class="divider-circle"></div>
+                                <ul class="pricing-list">
+                                    <li style="margin: 6px 0px;">Реакция в течении суток</li>
+                                    <li style="margin: 6px 0px;">Мониторинг сайта</li>
+                                    <li style="margin: 6px 0px;">2 часа работы</li>
+                                    <li style="margin: 6px 0px;">-12% при заказе на год</li>
 
-
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="col-md-3 margin-t-20">
-                        <div class="bg-gray text-center padding-b-30 pricing-plan">
-                            <div class="bg-dark plan-name">
-                                <p class="text-uppercase text-white">"Мини"</p>
+                                </ul>
                             </div>
-                            <div class="plan-price text-center bg-white" style="padding: 30px 0px;">
-                                <h3><b>80 руб</b></h3>
-
-                            </div>
-                            <div class="pricing-features bg-gray padding-b-30">
-                                <p>Реакция в течении суток</p>
-                                <p>Мониторинг сайта</p>
-                                <p>2 часа работы</p>
-                                <p>-12% при заказе на год</p>
-                            </div>
-                            <a href="#" class="btn" style="border: 1px solid white;">Заказать</a>
+                            <div class="pricing-table-footer"><a class="button button-oslo-gray button-block"
+                                                                 href="#win5">Заказать</a></div>
                         </div>
                     </div>
+                    <div class="col-md-3 price-width">
+                        <div class="pricing-table">
+                            <div class="pricing-table-body">
+                                <h5 class="pricing-table-header">Стандарт</h5>
 
-                    <div class="col-md-3 margin-t-20">
-                        <div class="bg-gray text-center padding-b-30 pricing-plan">
-                            <div class="bg-dark plan-name">
-                                <p class="text-uppercase text-white">"Стандарт"</p>
-                            </div>
-                            <div class="plan-price text-center bg-white" style="padding: 30px 0px;">
-                                <h3><b>260 руб</b></h3>
 
+                                <div class="pricing-table__item-price">
+                                    <span class="pricing-table__item-price-value">200</span>
+                                    <div class="pricing-table__item-price-aside"><span class="top">руб</span>
+                                    </div>
+                                </div>
+                                <div class="divider-circle"></div>
+                                <ul class="pricing-list">
+                                    <li style="margin: 6px 0px;">Реакция в течении суток</li>
+                                    <li style="margin: 6px 0px;">Мониторинг сайта</li>
+                                    <li style="margin: 6px 0px;">8 часа работы</li>
+                                    <li style="margin: 6px 0px;">-12% при заказе на год</li>
+
+                                </ul>
                             </div>
-                            <div class="pricing-features bg-gray padding-b-30">
-                                <p>Реакция в течении суток</p>
-                                <p>Мониторинг сайта</p>
-                                <p>8 часов работы</p>
-                                <p>-12% при заказе на год</p>
-                            </div>
-                            <a href="#" class="btn" style="border: 1px solid white;">Заказать</a>
+                            <div class="pricing-table-footer"><a class="button button-oslo-gray button-block"
+                                                                 href="#win5"">Заказать</a></div>
                         </div>
                     </div>
+                    <div class="col-md-3 price-width">
+                        <div class="pricing-table">
+                            <div class="pricing-table-body">
+                                <h5 class="pricing-table-header">Оптимальный</h5>
 
-                    <div class="col-md-3 margin-t-20">
-                        <div class="bg-gray text-center padding-b-30 pricing-plan">
-                            <div class="bg-dark plan-name">
-                                <p class="text-uppercase text-white">"Оптимальный"</p>
-                            </div>
-                            <div class="plan-price text-center bg-white" style="padding: 30px 0px;">
-                                <h3><b>480 руб</b></h3>
 
+                                <div class="pricing-table__item-price">
+                                    <span class="pricing-table__item-price-value">460</span>
+                                    <div class="pricing-table__item-price-aside"><span class="top">руб</span>
+                                    </div>
+                                </div>
+                                <div class="divider-circle"></div>
+                                <ul class="pricing-list">
+                                    <li style="margin: 6px 0px;">Реакция в течении суток</li>
+                                    <li style="margin: 6px 0px;">Мониторинг сайта</li>
+                                    <li style="margin: 6px 0px;">24 часа работы</li>
+                                    <li style="margin: 6px 0px;">-12% при заказе на год</li>
+
+                                </ul>
                             </div>
-                            <div class="pricing-features bg-gray padding-b-30">
-                                <p>Реакция в течении суток</p>
-                                <p>Мониторинг сайта</p>
-                                <p>24 часа работы</p>
-                                <p>-12% при заказе на год</p>
-                            </div>
-                            <a href="#" class="btn" style="border: 1px solid white;">Заказать</a>
+                            <div class="pricing-table-footer"><a class="button button-oslo-gray button-block"
+                                                                 href="#win5">Заказать</a></div>
                         </div>
                     </div>
+                    <div class="col-md-3 price-width">
+                        <div class="pricing-table">
+                            <div class="pricing-table-body">
+                                <h5 class="pricing-table-header">Максимум</h5>
 
-                    <div class="col-md-3 margin-t-20">
-                        <div class="bg-gray text-center padding-b-30 pricing-plan">
-                            <div class="bg-dark plan-name">
-                                <p class="text-uppercase text-white">"Максимум"</p>
-                            </div>
-                            <div class="plan-price text-center bg-white" style="padding: 30px 0px;">
-                                <h3><b>690 руб</b></h3>
 
+                                <div class="pricing-table__item-price">
+                                    <span class="pricing-table__item-price-value">690</span>
+                                    <div class="pricing-table__item-price-aside"><span class="top">руб</span>
+                                    </div>
+                                </div>
+                                <div class="divider-circle"></div>
+                                <ul class="pricing-list">
+                                    <li style="margin: 6px 0px;">Реакция в течении суток</li>
+                                    <li style="margin: 6px 0px;">Мониторинг сайта</li>
+                                    <li style="margin: 6px 0px;">40 часов работы</li>
+                                    <li style="margin: 6px 0px;">-12% при заказе на год</li>
+
+                                </ul>
                             </div>
-                            <div class="pricing-features bg-gray padding-b-30">
-                                <p>Реакция в течении суток</p>
-                                <p>Мониторинг сайта</p>
-                                <p>40 часов работы</p>
-                                <p>-12% при заказе на год</p>
-                            </div>
-                            <a href="#" class="btn" style="border: 1px solid white;">Заказать</a>
+                            <div class="pricing-table-footer"><a class="button button-oslo-gray button-block"
+                                                                 href="#win5">Заказать</a></div>
                         </div>
                     </div>
                 </div>
-
             </div>
-            <div class="col-md-push-3 col-md-6">
 
-            <div class="quote-3">
-                <p class="text-uppercase">Дополнительный пакет</p>
-               <p>Дополнительный пакет создан специльно для тех, кому недостаточно любого из представленных выше пакетов. Время работы специалиста в дополнительном пакете 30 минут
-                </p>
-                <p class="text-black">20 руб</p>
-                <a href="#" class="btn" style="border: 1px solid black; padding-top:3%;">Заказать</a>
-        </div>
-    </section>
+<div class="row">
+            <div class="col-md-push-1 col-md-10 margin-t-20">
+                <div class="col-md-push-3 col-md-6">
+
+                    <div class="pricing-table">
+                        <div class="pricing-table-body">
+                            <h5 class="pricing-table-header">Дополнительный пакет</h5>
+
+
+                            <div class="pricing-table__item-price">
+                                <span class="pricing-table__item-price-value">15</span>
+                                <div class="pricing-table__item-price-aside"><span class="top">руб</span>
+                                </div>
+                            </div>
+                            <div class="divider-circle"></div>
+                            <p class="pricing-list">Дополнительный пакет создан специльно для тех, кому недостаточно любого из представленных
+                                выше пакетов. Время работы специалиста в дополнительном пакете 30 минут.
+                            </p>
+                        </div>
+                        <div class="pricing-table-footer"><a class="button button-oslo-gray button-block"
+                                                             href="#win5">Заказать</a></div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div></div>
+    </div>
+
+
+
+
+    {#<section class="section" id="pricing">#}
+    {#<div class="container">#}
+
+
+    {#<h3 class="text-black-big" style="padding-top:3%;">Пакеты на поддержку сайта</h3>#}
+
+
+    {#<div class="col-md-12">#}
+    {#<div class="row">#}
+    {#<div class="col-md-3 margin-t-20">#}
+    {#<div class="bg-gray text-center padding-b-30 pricing-plan">#}
+    {#<div class="bg-dark plan-name">#}
+    {#<p class="text-uppercase text-white">"Мини"</p>#}
+    {#</div>#}
+    {#<div class="plan-price text-center bg-white" style="padding: 30px 0px;">#}
+    {#<h3><b>80 руб</b></h3>#}
+
+    {#</div>#}
+    {#<div class="pricing-features bg-gray padding-b-30">#}
+    {#<p>Реакция в течении суток</p>#}
+    {#<p>Мониторинг сайта</p>#}
+    {#<p>2 часа работы</p>#}
+    {#<p>-12% при заказе на год</p>#}
+    {#</div>#}
+    {#<a href="#" class="btn" style="border: 1px solid white;">Заказать</a>#}
+    {#</div>#}
+    {#</div>#}
+
+    {#<div class="col-md-3 margin-t-20">#}
+    {#<div class="bg-gray text-center padding-b-30 pricing-plan">#}
+    {#<div class="bg-dark plan-name">#}
+    {#<p class="text-uppercase text-white">"Стандарт"</p>#}
+    {#</div>#}
+    {#<div class="plan-price text-center bg-white" style="padding: 30px 0px;">#}
+    {#<h3><b>260 руб</b></h3>#}
+
+    {#</div>#}
+    {#<div class="pricing-features bg-gray padding-b-30">#}
+    {#<p>Реакция в течении суток</p>#}
+    {#<p>Мониторинг сайта</p>#}
+    {#<p>8 часов работы</p>#}
+    {#<p>-12% при заказе на год</p>#}
+    {#</div>#}
+    {#<a href="#" class="btn" style="border: 1px solid white;">Заказать</a>#}
+    {#</div>#}
+    {#</div>#}
+
+    {#<div class="col-md-3 margin-t-20">#}
+    {#<div class="bg-gray text-center padding-b-30 pricing-plan">#}
+    {#<div class="bg-dark plan-name">#}
+    {#<p class="text-uppercase text-white">"Оптимальный"</p>#}
+    {#</div>#}
+    {#<div class="plan-price text-center bg-white" style="padding: 30px 0px;">#}
+    {#<h3><b>480 руб</b></h3>#}
+
+    {#</div>#}
+    {#<div class="pricing-features bg-gray padding-b-30">#}
+    {#<p>Реакция в течении суток</p>#}
+    {#<p>Мониторинг сайта</p>#}
+    {#<p>24 часа работы</p>#}
+    {#<p>-12% при заказе на год</p>#}
+    {#</div>#}
+    {#<a href="#" class="btn" style="border: 1px solid white;">Заказать</a>#}
+    {#</div>#}
+    {#</div>#}
+
+    {#<div class="col-md-3 margin-t-20">#}
+    {#<div class="bg-gray text-center padding-b-30 pricing-plan">#}
+    {#<div class="bg-dark plan-name">#}
+    {#<p class="text-uppercase text-white">"Максимум"</p>#}
+    {#</div>#}
+    {#<div class="plan-price text-center bg-white" style="padding: 30px 0px;">#}
+    {#<h3><b>690 руб</b></h3>#}
+
+    {#</div>#}
+    {#<div class="pricing-features bg-gray padding-b-30">#}
+    {#<p>Реакция в течении суток</p>#}
+    {#<p>Мониторинг сайта</p>#}
+    {#<p>40 часов работы</p>#}
+    {#<p>-12% при заказе на год</p>#}
+    {#</div>#}
+    {#<a href="#" class="btn" style="border: 1px solid white;">Заказать</a>#}
+    {#</div>#}
+    {#</div>#}
+    {#</div>#}
+
+    {#</div>#}
+    {#<div class="col-md-push-3 col-md-6">#}
+
+    {#<div class="quote-3">#}
+    {#<p class="text-uppercase">Дополнительный пакет</p>#}
+    {#<p>Дополнительный пакет создан специльно для тех, кому недостаточно любого из представленных выше пакетов. Время работы специалиста в дополнительном пакете 30 минут#}
+    {#</p>#}
+    {#<p class="text-black">20 руб</p>#}
+    {#<a href="#" class="btn" style="border: 1px solid black; padding-top:3%;">Заказать</a>#}
+    {#</div>#}
+    {#</section>#}
 
 
 
 
     <!--Form Section-->
-    <section class="section bg-gray-light" id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4" style="text-align:center;">
-                    {#<i class="fa fa-quote-left fa-3x" aria-hidden="true"></i>#}
+    {#<section class="section bg-gray-light" id="contact">#}
+    {#<div class="container">#}
+    {#<div class="row">#}
+    {#<div class="col-md-4" style="text-align:center;">#}
+    {#<i class="fa fa-quote-left fa-3x" aria-hidden="true"></i>#}
 
 
-                    <div id="first-slider">
-                        <h3 class="text-black" style="padding-top:15px;">
-                            Немного мотивации</h3>
-                        <div id="carousel-example-generic" class="carousel slide carousel-fade">
+    {#<div id="first-slider">#}
+    {#<h3 class="text-black" style="padding-top:15px;">#}
+    {#Немного мотивации</h3>#}
+    {#<div id="carousel-example-generic" class="carousel slide carousel-fade">#}
 
 
-                            <div id="first-slider">
-                                <div id="carousel-example-generic" class="carousel slide carousel-fade">
-                                    <!-- Indicators -->
+    {#<div id="first-slider">#}
+    {#<div id="carousel-example-generic" class="carousel slide carousel-fade">#}
+    {#<!-- Indicators -->#}
 
-                                    <!-- Wrapper for slides -->
-                                    <div class="carousel-inner" role="listbox">
-                                        <!-- Item 1 -->
-                                        <div class="item active slide-content "
-                                             style="width:100%; left:0%; height: auto;">
-                                            <p class="quote-2"><i>Для нас не должно существовать никаких пределов</i>
-                                            </p>
-                                            <p style="margin-top:7%;text-align:center;">Ричард Бах</br>Философ и
-                                                психолог</p>
+    {#<!-- Wrapper for slides -->#}
+    {#<div class="carousel-inner" role="listbox">#}
+    {#<!-- Item 1 -->#}
+    {#<div class="item active slide-content "#}
+    {#style="width:100%; left:0%; height: auto;">#}
+    {#<p class="quote-2"><i>Для нас не должно существовать никаких пределов</i>#}
+    {#</p>#}
+    {#<p style="margin-top:7%;text-align:center;">Ричард Бах</br>Философ и#}
+    {#психолог</p>#}
 
-                                            <div class="bg-overlay"></div>
-                                        </div>
-                                        <!-- Item 2 -->
-                                        <div class="item slide-content" style="width:100%; left:0%; height: auto;">
-                                            <p class="quote-2"><i>Вы не будете расти, если не будете пытаться сделать
-                                                    что-то за пределами того, что вы уже знаете в совершенстве.</i></p>
-                                            <p style="margin-top:7%;text-align:center;">Уильям Джеймс</br>Писатель и
-                                                философ</p>
+    {#<div class="bg-overlay"></div>#}
+    {#</div>#}
+    {#<!-- Item 2 -->#}
+    {#<div class="item slide-content" style="width:100%; left:0%; height: auto;">#}
+    {#<p class="quote-2"><i>Вы не будете расти, если не будете пытаться сделать#}
+    {#что-то за пределами того, что вы уже знаете в совершенстве.</i></p>#}
+    {#<p style="margin-top:7%;text-align:center;">Уильям Джеймс</br>Писатель и#}
+    {#философ</p>#}
 
-                                            <div class="bg-overlay"></div>
-
-
-                                        </div>
-                                        <!-- Item 3 -->
-                                        <div class="item slide-content" style="width:100%; left:0%; height: auto;">
-                                            <p class="quote-2"><i>Для нас не должно существовать никаких пределов</i>
-                                            </p>
-                                            <p style="margin-top:7%;text-align:center;">Ричард Бах</br>Писатель и
-                                                философ</p>
-
-                                            <div class="bg-overlay"></div>
-
-                                        </div>
-
-                                        <!-- Indicators -->
-                                        <ol class="carousel-indicators" style="position:relative; margin-top: 30px;">
-                                            <li data-target="#carousel-example-generic" data-slide-to="0"
-                                                class="active"></li>
-                                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-
-                                        </ol>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
+    {#<div class="bg-overlay"></div>#}
 
 
-                        </div>
-                    </div>
+    {#</div>#}
+    {#<!-- Item 3 -->#}
+    {#<div class="item slide-content" style="width:100%; left:0%; height: auto;">#}
+    {#<p class="quote-2"><i>Для нас не должно существовать никаких пределов</i>#}
+    {#</p>#}
+    {#<p style="margin-top:7%;text-align:center;">Ричард Бах</br>Писатель и#}
+    {#философ</p>#}
+
+    {#<div class="bg-overlay"></div>#}
+
+    {#</div>#}
+
+    {#<!-- Indicators -->#}
+    {#<ol class="carousel-indicators" style="position:relative; margin-top: 30px;">#}
+    {#<li data-target="#carousel-example-generic" data-slide-to="0"#}
+    {#class="active"></li>#}
+    {#<li data-target="#carousel-example-generic" data-slide-to="1"></li>#}
+    {#<li data-target="#carousel-example-generic" data-slide-to="2"></li>#}
+
+    {#</ol>#}
+
+    {#</div>#}
+
+    {#</div>#}
+
+    {#</div>#}
 
 
-                </div>
+    {#</div>#}
+    {#</div>#}
 
 
-                <div class="col-md-8">
-                    <div class="text-center">
-                        <h3 class="text-black" style="padding-top:15px;">Остались
-                            вопросы?</h3>
-                        <img src="images/title-border.png" alt="" class="img-responsive center-block"/>
-                        <p class="sub-title text-muted">Заполните форму обратной связи и наши специалисты свяжутся с
-                            вами в ближайшее время.</p>
-                    </div>
+    {#</div>#}
 
 
-                    <form>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="username" placeholder="Имя" required/>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <input type="email" class="form-control" id="useremail" placeholder="Ваш Email"
-                                           required/>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
+    {#<div class="col-md-8">#}
+    {#<div class="text-center">#}
+    {#<h3 class="text-black" style="padding-top:15px;">Остались#}
+    {#вопросы?</h3>#}
+    {#<img src="images/title-border.png" alt="" class="img-responsive center-block"/>#}
+    {#<p class="sub-title text-muted">Заполните форму обратной связи и наши специалисты свяжутся с#}
+    {#вами в ближайшее время.</p>#}
+    {#</div>#}
 
-                                    <input type="text" class="form-control" id="subject" placeholder="Тема" required/>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-group">
-                            <textarea class="form-control" rows="5" id="message"
-                                      placeholder="Сообщение...."></textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-12 text-right">
-                                <input type="submit" class="submitBnt btn btn-custom" value="Отправить сообщение"
-                                       style="color:black;">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+
+    {#<form>#}
+    {#<div class="row">#}
+    {#<div class="col-md-4">#}
+    {#<div class="form-group">#}
+    {#<input type="text" class="form-control" id="username" placeholder="Имя" required/>#}
+    {#</div>#}
+    {#</div>#}
+    {#<div class="col-md-4">#}
+    {#<div class="form-group">#}
+    {#<input type="email" class="form-control" id="useremail" placeholder="Ваш Email"#}
+    {#required/>#}
+    {#</div>#}
+    {#</div>#}
+    {#<div class="col-md-4">#}
+    {#<div class="form-group">#}
+
+    {#<input type="text" class="form-control" id="subject" placeholder="Тема" required/>#}
+    {#</div>#}
+    {#</div>#}
+    {#</div>#}
+    {#<div class="row">#}
+    {#<div class="col-md-12">#}
+    {#<div class="form-group">#}
+    {#<textarea class="form-control" rows="5" id="message"#}
+    {#placeholder="Сообщение...."></textarea>#}
+    {#</div>#}
+    {#</div>#}
+    {#</div>#}
+    {#<div class="row">#}
+    {#<div class="col-sm-12 text-right">#}
+    {#<input type="submit" class="submitBnt btn btn-custom" value="Отправить сообщение"#}
+    {#style="color:black;">#}
+    {#</div>#}
+    {#</div>#}
+    {#</form>#}
+    {#</div>#}
+    {#</div>#}
+    {#</div>#}
+    {#</section>#}
     <!--END FORM-->
 {% endblock %}
