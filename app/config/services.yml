@@ -8,16 +8,20 @@ services:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
 
+    mail.send:
+          class: Blogger\BlogBundle\Service\SendMail
+          arguments: [~, Blogger\BlogBundle\Entity\Enquiry , ~]
+
     admin.blog:
-            class: Blogger\BlogBundle\Admin\BlogAdmin
-            arguments: [~, Blogger\BlogBundle\Entity\Blog, ~]
-            tags:
-                - { name: sonata.admin, manager_type: orm, label: Blog }
-            public: true
+          class: Blogger\BlogBundle\Admin\BlogAdmin
+          arguments: [~, Blogger\BlogBundle\Entity\Blog, ~]
+          tags:
+              - { name: sonata.admin, manager_type: orm, label: Blog }
+          public: true
 
     admin.comment:
-            class:  Blogger\BlogBundle\Admin\CommentAdmin
-            arguments: [~, Blogger\BlogBundle\Entity\Comment, ~]
-            tags:
-                - { name: sonata.admin, manager_type: orm, label: Comments }
-            public: true
+          class:  Blogger\BlogBundle\Admin\CommentAdmin
+          arguments: [~, Blogger\BlogBundle\Entity\Comment, ~]
+          tags:
+              - { name: sonata.admin, manager_type: orm, label: Comments }
+          public: true

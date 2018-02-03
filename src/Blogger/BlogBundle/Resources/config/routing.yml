@@ -74,3 +74,9 @@ BloggerBlogBundle_projects:
     defaults: { _controller: "BloggerBlogBundle:Page:projects" }
     requirements:
     methods:  GET
+
+BloggerBlogBundle_confirm:
+    path:   /confirm
+    defaults: { _controller: "BloggerBlogBundle:Page:confirm" }
+    requirements:
+    methods:  GET|POST

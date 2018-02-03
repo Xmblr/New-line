@@ -15,16 +15,9 @@ class Enquiry
     public static function loadValidatorMetadata(ClassMetadata $metadata)
     {
         $metadata->addPropertyConstraint('name', new NotBlank());
-        $metadata->addPropertyConstraint('email', new Email(array(
-            'message' => 'symblog does not like invalid emails. Give me a real one!'
-        )));
-        $metadata->addPropertyConstraint('subject',  new Length(array(
-            'max'        => 50
-
-        )));
-        $metadata->addPropertyConstraint('body', new Length(array(
-            'min'        => 50
-        )));
+        $metadata->addPropertyConstraint('email', new Email());
+        $metadata->addPropertyConstraint('subject', new NotBlank());
+        $metadata->addPropertyConstraint('body', new NotBlank());
     }
 
     protected $name;
