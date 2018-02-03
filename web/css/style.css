@@ -407,12 +407,13 @@ p {
     padding: 20px 0px;
     width: 100%;
     border-radius: 0px;
-    z-index: 10;
+    z-index: 1;
     margin-bottom: 0px;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.4s ease;
+    /*-webkit-transition: all 0.5s ease-in-out;*/
+    /*-moz-transition: all 0.5s ease-in-out;*/
+    /*-o-transition: all 0.5s ease-in-out;*/
+    /*transition: all 0.5s ease-in-out;*/
 }
 
 .sticky-wrapper {
@@ -444,7 +445,7 @@ p {
 }
 }
 .navbar-custom>.container-fluid{
-    width: 90%;
+    width: 96%;
 }
 .navbar-custom .navbar-nav li a:hover,.navbar-custom .navbar-nav li a:focus,.navbar-custom .navbar-nav li a:active {
     color: black;

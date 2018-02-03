@@ -40,9 +40,9 @@
 
 <section id="wrapper">
 
-    <section>
+
         {% block header %}
-            <div class="navbar navbar-custom sticky navbar-custom-myheader" role="navigation">
+    <header class="navbar navbar-custom navbar-custom-myheader" role="navigation">
                 <div class="container-fluid" style="padding:0% 0%;">
                     <div class="col-md-1">
                         <h3 class="header-logo" style="">{% block blog_title %}<a
@@ -162,7 +162,7 @@
                     </div>
                 </div>
                 <!-- end container -->
-            </div>
+
             <!--END NAVBAR-->
 
 
@@ -173,13 +173,10 @@
 
 
         {% endblock %}
-    </section>
+    </header>
 
     <section>
         {% block body %}
-
-        {% endblock %}
-        {% block sidebar %}
 
         {% endblock %}
     </section>
@@ -187,6 +184,8 @@
 
     <div id="footer">
         {% block footer %}
+
+
             <div class="home-o-nas-foto">
 
                 <div class="container-fluid"
@@ -270,7 +269,16 @@ line-height: 70px;">NEW</br><span class="slogan-line">line</span></h3></div>
     {% javascripts '@jquery' '@bootstrap_js' %}
     <script type="text/javascript" src="{{ asset_url }}"></script>
 
-
+<script>
+    $(window).scroll(function() {
+        if (($(this).scrollTop() > 1) && ($(window).width() >= 1000)){
+            $('header').addClass("sticky");
+        }
+        else{
+            $('header').removeClass("sticky");
+        }
+    });
+</script>
     <script src="{{ asset('js/waypoints.min.js') }}" type="text/javascript"></script>
     <script type="text/javascript" src="{{ asset('js/isotope.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/owl.carousel.min.js') }}"></script>
