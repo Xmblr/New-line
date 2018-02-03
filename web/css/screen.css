@@ -95,7 +95,7 @@ hgroup:hover {
 }
 
 #header h2 {
-    padding-top: 50px;
+    padding-top: 30px;
     font-family: 'Broadway', cursive;
     font-size: 92px;
     text-align: center;
@@ -572,7 +572,7 @@ display:none;}
     position: relative;
     float: left;
     padding: 9px 10px;
-    margin-left: 15px;
+    margin-left: 5px;
     margin-bottom: 8px;
     background-color: transparent;
     background-image: none;
@@ -583,20 +583,22 @@ display:none;}
     color: #ffffff;
 }
 
-.sticky {
-    position: -webkit-sticky;
-    position: -moz-sticky;
-    position: -ms-sticky;
-    position: -o-sticky;
-    position: sticky;
-    top: 0px;
-    width: 100%;
-    border-bottom:1px solid #ccc;
-    background: white;
-    z-index:1000;
-}
+/*.sticky {*/
+    /*position: -webkit-sticky;*/
+    /*position: -moz-sticky;*/
+    /*position: -ms-sticky;*/
+    /*position: -o-sticky;*/
+    /*position: sticky;*/
+    /*top: 0px;*/
+    /*width: 100%;*/
+    /*border-bottom:1px solid #ccc;*/
+    /*background: white;*/
+    /*z-index:1000;*/
+/*}*/
 
 .block1:hover {box-shadow: 8px 8px 35px 0 rgba(0,0,0,0.15)}
+.block2:hover {box-shadow: 8px 8px 35px 0 rgba(0,0,0,0.15)}
+.block3:hover {box-shadow: 8px 8px 35px 0 rgba(0,0,0,0.15)}
 
 .element-single {
     position: relative;
@@ -1024,4 +1026,67 @@ display:none;}
 a.btn-hover:hover {
     transform: scale(1.03);
     transition: all .5s ease;
+}
+
+.icon-360 { /* 1st set of icons. Rotate them 360deg onmouseover and out */
+    -moz-transition: all 0.8s ease-in-out;
+    -webkit-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+    -ms-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+}
+
+.icon-360:hover{
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+
+.navbar.navbar-custom.navbar-custom-myheader.sticky {
+    font-size: 15px;
+    position:fixed;
+    line-height: 20px;
+    height: 100px;
+    background:  	#808080;
+    text-align: center;
+    padding: 5px 0px;
+    opacity: 0.9;
+}
+
+header {
+    position: fixed;
+    transition: all 0.9s ease;
+}
+
+
+.sticky .navbar-collapse.collapse {
+
+ }
+
+@media (max-width:1000px) {
+    /*.navbar.navbar-custom.navbar-custom-myheader.sticky {*/
+        /*position:relative;*/
+    /*}*/
+
+    .phone-call {
+        top: 72%;
+    }
+    .seo-calculator {
+        top: 48%;
+    }
+}
+
+@media (max-height:450px) {
+    .phone-call {
+    top:70%
+}
+    .seo-calculator {
+        top: 30%;
+    }
+    .seo-mail {
+        top: 50%;
+    }
 }
