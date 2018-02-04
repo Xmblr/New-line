@@ -81,8 +81,32 @@ class PageController extends Controller
     {
         $callform = $this->Call($request);
 
+        $enquiry = new Enquiry();
+
+        $form = $this->createForm(EnquiryType::class, $enquiry);
+
+        if ($request->isMethod($request::METHOD_POST)) {
+
+            $form->handleRequest($request);
+            if ($form->isValid()) {
+
+                $this->Mailer($enquiry);
+
+                $request->getSession()
+                    ->getFlashBag()
+                    ->add('success', 'Ваше сообщение успешно отправлено.')
+                ;
+                // Redirect - This is important to prevent users re-posting
+                // the form if they refresh the page
+                return $this->redirect($this->generateUrl('BloggerBlogBundle_seo'));
+
+            }
+
+        }
+
         return $this->render('BloggerBlogBundle:Page:seo.html.twig', array(
-            'callform' =>$callform->createView()
+            'callform' =>$callform->createView(),
+            'form' => $form->createView()
         ));
     }
 

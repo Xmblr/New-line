@@ -22,26 +22,29 @@
         <div class="section bg-gray-light container-fluid" style="padding-top: 10px; padding-bottom: 10px; padding:0%;">
             <h2>Заявка на Seo-продвижение сайта</h2>
             <div class="container-fluid">
+                {{ form_start(form, { 'action': path('BloggerBlogBundle_seo'), 'method': 'POST' }) }}
+                {{ form_errors(form) }}
                 <div class="form-group">
-                    <input type="text" class="form-control" id="username" placeholder="Ссылка на сайт" required/>
+                    {{ form_widget(form.subject, {'attr':{'class':'form-control','placeholder':'Ссылка на сайт'}}) }}
+                    {#<input type="text" class="form-control" id="username" placeholder="Ссылка на сайт" required/>#}
                 </div>
 
 
                 <div class="form-group">
-                    <input type="text" class="form-control" id="username" placeholder="Ваше имя"
-                           required/>
+                    {{ form_widget(form.name, {'attr':{'class':'form-control','placeholder':'Ваше имя'}}) }}
+                    {#<input type="text" class="form-control" id="username" placeholder="Ваше имя" required/>#}
                 </div>
                 <div class="form-group">
-                    <input type="email" class="form-control" id="useremail" placeholder="Ваш Email"
-                           required/>
+                    {{ form_widget(form.email, {'attr':{'class':'form-control','placeholder':'Ваш Email'}}) }}
+                    {#<input type="email" class="form-control" id="useremail" placeholder="Ваш Email" required/>#}
                 </div>
-
-
                 <div class="form-group">
-
-                    <input type="text" class="form-control" id="subject" placeholder="Номер телефона" required/>
+                    {{ form_widget(form.body, {'attr':{'class':'form-control','placeholder':'Номер телефона....'}}) }}
+                    {#<input type="text" class="form-control" id="subject" placeholder="Номер телефона" required/>#}
                 </div>
-                <a href="#" class="btn" style="border: 1px solid black; text-align: center;">Отправить</a>
+                <input type="submit" class="submitBnt btn btn-custom" value="Отправить сообщение" style="color:black;">
+                {#<a href="#" class="btn" style="border: 1px solid black; text-align: center;">Отправить</a>#}
+                {{ form_end(form) }}
             </div>
         </div>
 
@@ -67,71 +70,71 @@
                     <div class="element-single">
                         <form name="f1">
                             <span class="an-custom-checkbox radio dark-text">
-                                <input type="radio" name="name" id="check-1" value="80">
+                                <input type="radio" name="f1" id="check-1" value="80">
                                 <label for="check-1">Авто</label>
                             </span>
                                 <span class="an-custom-checkbox radio dark-text">
-                                <input type="radio" name="name" id="check-2" value="100">
+                                <input type="radio" name="f1" id="check-2" value="100">
                                 <label for="check-2">Банковские услуги</label>
                             </span>
                                 <span class="an-custom-checkbox radio dark-text">
-                                <input type="radio" name="name" id="check-3" value="60">
+                                <input type="radio" name="f1" id="check-3" value="60">
                                 <label for="check-3">Бытовая техника</label>
                             </span>
                                 <span class="an-custom-checkbox radio dark-text" >
-                                <input type="radio" name="name" id="check-4" value="50">
+                                <input type="radio" name="f1" id="check-4" value="50">
                                 <label for="check-4">Двери</label>
                             </span>
                                 <span class="an-custom-checkbox radio dark-text" >
-                                <input type="radio" name="name" id="check-5" value="50">
+                                <input type="radio" name="f1" id="check-5" value="50">
                                 <label for="check-5">Дизайн интерьеров</label>
                             </span>
                                 <span class="an-custom-checkbox radio dark-text">
-                                <input type="radio" name="name" id="check-6" value="80">
+                                <input type="radio" name="f1" id="check-6" value="80">
                                 <label for="check-6">Медицина</label>
                             </span>
                                 <span class="an-custom-checkbox radio dark-text">
-                                <input type="radio" name="name" id="check-7" value="120">
+                                <input type="radio" name="f1" id="check-7" value="120">
                                 <label for="check-7">Мебель</label>
                             </span>
                                 <span class="an-custom-checkbox radio dark-text">
-                                <input type="radio" name="name" id="check-8" value="100">
+                                <input type="radio" name="f1" id="check-8" value="100">
                                 <label for="check-8">Недвижимость</label>
                             </span>
                                 <span class="an-custom-checkbox radio dark-text">
-                                <input type="radio" name="name" id="check-9" value="40">
+                                <input type="radio" name="f1" id="check-9" value="40">
                                 <label for="check-9">Обучение</label>
                             </span>
                                 <span class="an-custom-checkbox radio dark-text">
-                            <input type="radio" name="name" id="check-10" value="150">
+                            <input type="radio" name="f1" id="check-10" value="150">
                             <label for="check-10">Окна</label>
                             </span>
                                 <span class="an-custom-checkbox radio dark-text">
-                                <input type="radio" name="name" id="check-11" value="70">
+                                <input type="radio" name="f1" id="check-11" value="70">
                                 <label for="check-11">Отдых</label>
                             </span>
                                 <span class="an-custom-checkbox radio dark-text">
-                                <input type="radio" name="name" id="check-12" value="50">
+                                <input type="radio" name="f1" id="check-12" value="50">
                                 <label for="check-12">Продажа одежды и обуви</label>
                             </span>
                                 <span class="an-custom-checkbox radio dark-text">
-                                <input type="radio" name="name" id="check-14" value="90">
+                                <input type="radio" name="f1" id="check-14" value="90">
                                 <label for="check-14">Развлечения</label>
                             </span>
                                 <span class="an-custom-checkbox radio dark-text">
-                                <input type="radio" name="name" id="check-15" value="130">
+                                <input type="radio" name="f1" id="check-15" value="130">
                                 <label for="check-15">Строительство</label>
                             </span>
                                 <span class="an-custom-checkbox radio dark-text">
-                                <input type="radio" name="name" id="check-16" value="70">
+                                <input type="radio" name="f1" id="check-16" value="70">
                                 <label for="check-16">Услуги</label>
                             </span>
                                 <span class="an-custom-checkbox radio dark-text">
-                                <input type="radio" name="name" id="check-19" value="100">
+                                <input type="radio" name="f1" id="check-19" value="100">
                                 <label for="check-19">Hi-tech</label>
                             </span>
                                 <span class="an-custom-checkbox radio dark-text">
-                                <input type="radio" name="name" id="check-20" value="60">
+                                <input type="radio" name="f1" id="check-20" value="60">
                                 <label for="check-20">Другая</label>
                             </span>
                         </form>
@@ -145,19 +148,19 @@
                         <div class="element-single">
                             <form name="f2">
                                 <span class="an-custom-checkbox radio dark-text">
-                                    <input type="radio" name="name" id="check-21" value="150">
+                                    <input type="radio" name="f2" id="check-21" value="150">
                                     <label for="check-21">Новый (до 2 месяцев)</label>
                                 </span>
                                 <span class="an-custom-checkbox radio dark-text">
-                                    <input type="radio" name="name" id="check-22" value="100">
+                                    <input type="radio" name="f2" id="check-22" value="100">
                                     <label for="check-22">До 1 года</label>
                                 </span>
                                 <span class="an-custom-checkbox radio dark-text">
-                                    <input type="radio" name="name" id="check-23" value="50">
+                                    <input type="radio" name="f2" id="check-23" value="50">
                                     <label for="check-23">От 1 до 3 лет</label>
                                 </span>
                                 <span class="an-custom-checkbox radio dark-text">
-                                    <input type="radio" name="name" id="check-24" value="0">
+                                    <input type="radio" name="f2" id="check-24" value="0">
                                     <label for="check-24">От 3 лет и выше</label>
                                 </span>
                             </form>
@@ -169,56 +172,100 @@
                         <div class="element-single">
                             <form name="f3">
                                 <span class="an-custom-checkbox radio dark-text">
-                                    <input type="radio" name="name" id="check-25" value="0">
+                                    <input type="radio" name="f3" id="check-25" value="0">
                                     <label for="check-25">Сайт-визитка</label>
                                 </span>
                                 <span class="an-custom-checkbox radio dark-text">
-                                    <input type="radio" name="name" id="check-26" value="100">
+                                    <input type="radio" name="f3" id="check-26" value="100">
                                     <label for="check-26">Корпоративный сайт</label>
                                 </span>
                                 <span class="an-custom-checkbox radio dark-text">
-                                    <input type="radio" name="name" id="check-27" value="200">
+                                    <input type="radio" name="f3" id="check-27" value="200">
                                     <label for="check-27">Интернет-магазин</label>
                                 </span>
                                 <span class="an-custom-checkbox radio dark-text">
-                                    <input type="radio" name="name" id="check-28" value="400">
+                                    <input type="radio" name="f3" id="check-28" value="400">
                                     <label for="check-28">Интернет-портал</label>
                                 </span>
                             </form>
                         </div>
                     </div>
-                    <a href="#" class="btn" style="border: 1px solid black;">Расчитать стоимость</a>
+
 
                     <div class="col-md-12" style="
     border-top: 2px dashed #ccc;
     margin-top: 10px">
 
 
-                        <div class="pricing-table__item-price">от
-                            <span class="pricing-table__item-price-value" id="price-value">200</span>
+                        <div class="pricing-table__item-price">
+                            от
+                            <span class="pricing-table__item-price-value" id="price-value" >
+                                200
+                                {#Калькулятор стоимости#}
+                                <script>
+                                    // document.getElementById('price-value').innerHTML = 200;
+                                    var f1 = document.forms.f1;
+                                    var f2 = document.forms.f2;
+                                    var f3 = document.forms.f3;
+                                    var radio1 = 0, radio2 = 0, radio3 = 0;
+                                    var value = parseInt(document.getElementById("price-value").innerHTML);
+                                    f1.onchange = function () {
+                                        if(document.querySelector('input[name="f1"]:checked'))
+                                        {
+                                            radio1 = parseInt(document.querySelector('input[name="f1"]:checked').value);
+                                        }
+                                        if(document.querySelector('input[name="f2"]:checked'))
+                                        {
+                                            radio2 = parseInt(document.querySelector('input[name="f2"]:checked').value);
+                                        }
+                                        if(document.querySelector('input[name="f3"]:checked'))
+                                        {
+                                            radio3 = parseInt(document.querySelector('input[name="f3"]:checked').value);
+                                        }
+                                        document.getElementById('price-value').innerHTML = value + radio1 + radio2 + radio3;
+                                    }
+                                    f2.onchange = function () {
+                                        if(document.querySelector('input[name="f1"]:checked'))
+                                        {
+                                            radio1 = parseInt(document.querySelector('input[name="f1"]:checked').value);
+                                        }
+                                        if(document.querySelector('input[name="f2"]:checked'))
+                                        {
+                                            radio2 = parseInt(document.querySelector('input[name="f2"]:checked').value);
+                                        }
+                                        if(document.querySelector('input[name="f3"]:checked'))
+                                        {
+                                            radio3 = parseInt(document.querySelector('input[name="f3"]:checked').value);
+                                        }
+                                        document.getElementById('price-value').innerHTML = value + radio1 + radio2 + radio3;
+                                    }
+                                    f3.onchange = function () {
+                                        if(document.querySelector('input[name="f1"]:checked'))
+                                        {
+                                            radio1 = parseInt(document.querySelector('input[name="f1"]:checked').value);
+                                        }
+                                        if(document.querySelector('input[name="f2"]:checked'))
+                                        {
+                                            radio2 = parseInt(document.querySelector('input[name="f2"]:checked').value);
+                                        }
+                                        if(document.querySelector('input[name="f3"]:checked'))
+                                        {
+                                            radio3 = parseInt(document.querySelector('input[name="f3"]:checked').value);
+                                        }
+                                        document.getElementById('price-value').innerHTML = value + radio1 + radio2 + radio3;
+                                    }
+                                </script>
+                                {#Калькулятор стоимости#}
+                            </span>
                             <div class="pricing-table__item-price-aside">
                                 <span class="top">руб</span>
                                 <span class="bottom">месяц</span>
                             </div>
+                            <a href="#win2" class="btn" style="border: 1px solid black;">Оформить заявку</a>
                         </div>
 
 
-                        <script>
-                            var f1 = document.forms.f1;
-                            var f2 = document.forms.f2;
-                            var f3 = document.forms.f3;
-                            f1.onchange = function () {
-                                var radio = document.querySelector('input[type="radio"]:checked');
-                                alert( "Radio checked: " + ( radio ? radio.value : "Не выбран" ) );
 
-                            }
-                            f2.onchange = function () {
-
-                            }
-                            f3.onchange = function () {
-
-                            }
-                        </script>
 
 
 
@@ -243,8 +290,8 @@
     <ol class="breadcrumb" style="background-color: white;" xmlns:v="http://rdf.data-vocabulary.org/#">
         <li typeof="v:Breadcrumb"><a href="{{ path('BloggerBlogBundle_homepage') }}" rel="v:url" property="v:title">Главная</a>
         </li>
-        <li typeof="v:Breadcrumb"><a href="{{ path('BloggerBlogBundle_services') }}" rel="v:url" property="v:title">Услуги</a>
-        </li>
+        {#<li typeof="v:Breadcrumb"><a href="{{ path('BloggerBlogBundle_services') }}" rel="v:url" property="v:title">Услуги</a>#}
+        {#</li>#}
         <li>Продвижение сайтов</li>
     </ol>
 
@@ -320,7 +367,7 @@
             {#<i class="fa fa-arrow-down" aria-hidden="true"></i>#}
         </div>
     </div>
-
+    </div>
 
     <section class="section bg-custom seo-foto" style="">
         <div class="container">
