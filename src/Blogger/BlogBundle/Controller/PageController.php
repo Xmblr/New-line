@@ -26,37 +26,24 @@ class PageController extends Controller
 
     }
 
-    public function aboutAction()
+    public function aboutAction(Request $request)
     {
-        return $this->render('BloggerBlogBundle:Page:about.html.twig');
+        $callform = $this->Call($request);
+
+        return $this->render('BloggerBlogBundle:Page:about.html.twig', array(
+            'callform' =>$callform->createView()
+        ));
     }
 
     public function contactAction(Request $request)
     {
-        $call = new Call();
-
-        $callform = $this->createForm(CallType::class, $call);
+        $callform = $this->Call($request);
 
         $enquiry = new Enquiry();
 
         $form = $this->createForm(EnquiryType::class, $enquiry);
 
         if ($request->isMethod($request::METHOD_POST)) {
-
-            $callform->handleRequest($request);
-            if ($callform->isValid()) {
-
-                $this->Caller($call);
-
-                $request->getSession()
-                    ->getFlashBag()
-                    ->add('success', 'Ваше сообщение успешно отправлено.')
-                ;
-                // Redirect - This is important to prevent users re-posting
-                // the form if they refresh the page
-                return $this->redirect($this->generateUrl('BloggerBlogBundle_contact'));
-
-            }
 
             $form->handleRequest($request);
             if ($form->isValid()) {
@@ -81,32 +68,58 @@ class PageController extends Controller
         ));
     }
 
-    public function servicesAction()
+    public function servicesAction(Request $request)
     {
-        return $this->render('BloggerBlogBundle:Page:services.html.twig');
+        $callform = $this->Call($request);
+
+        return $this->render('BloggerBlogBundle:Page:services.html.twig', array(
+            'callform' =>$callform->createView()
+        ));
     }
 
-    public function seoAction()
+    public function seoAction(Request $request)
     {
-        return $this->render('BloggerBlogBundle:Page:seo.html.twig');
+        $callform = $this->Call($request);
+
+        return $this->render('BloggerBlogBundle:Page:seo.html.twig', array(
+            'callform' =>$callform->createView()
+        ));
     }
 
-    public function createAction()
+    public function createAction(Request $request)
     {
-        return $this->render('BloggerBlogBundle:Page:create.html.twig');
+        $callform = $this->Call($request);
+
+        return $this->render('BloggerBlogBundle:Page:create.html.twig', array(
+            'callform' =>$callform->createView()
+        ));
     }
 
-    public function supportAction()
+    public function supportAction(Request $request)
     {
-        return $this->render('BloggerBlogBundle:Page:support.html.twig');
+        $callform = $this->Call($request);
+
+        return $this->render('BloggerBlogBundle:Page:support.html.twig', array(
+            'callform' =>$callform->createView()
+        ));
     }
-    public function programmerAction()
+
+    public function programmerAction(Request $request)
     {
-        return $this->render('BloggerBlogBundle:Page:programmer.html.twig');
+        $callform = $this->Call($request);
+
+        return $this->render('BloggerBlogBundle:Page:programmer.html.twig', array(
+            'callform' =>$callform->createView()
+        ));
     }
-    public function projectsAction()
+
+    public function projectsAction(Request $request)
     {
-        return $this->render('BloggerBlogBundle:Page:projects.html.twig');
+        $callform = $this->Call($request);
+
+        return $this->render('BloggerBlogBundle:Page:projects.html.twig', array(
+            'callform' =>$callform->createView()
+        ));
     }
 
     public function confirmAction(Request $request)

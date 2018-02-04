@@ -18,10 +18,13 @@
         </div>
     </div>
 
+    <script>
 
-    <script type="text/javascript">
-
-        setTimeout('window.history.back()',5000);
+        var oldURL = document.referrer;
+        setTimeout( 'location=oldURL;', 5000 );
 
     </script>
+
+
+
 {% endblock %}
