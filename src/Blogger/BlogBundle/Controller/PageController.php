@@ -18,6 +18,15 @@ class PageController extends Controller
 {
     public function indexAction(Request $request)
     {
+        $seoPage = $this->container->get('sonata.seo.page');
+        $seoPage
+            ->setTitle('Index')
+            ->addMeta('name', 'description', 'Index page')
+            ->addMeta('property', 'og:description', 'Index page')
+
+        ;
+
+
         $callform = $this->Call($request);
 
         return $this->render('BloggerBlogBundle:Page:index.html.twig', array(
@@ -28,6 +37,14 @@ class PageController extends Controller
 
     public function aboutAction(Request $request)
     {
+        $seoPage = $this->container->get('sonata.seo.page');
+        $seoPage
+            ->setTitle('About')
+            ->addMeta('name', 'description', 'Index page')
+            ->addMeta('property', 'og:description', 'Index page')
+
+        ;
+
         $callform = $this->Call($request);
 
         return $this->render('BloggerBlogBundle:Page:about.html.twig', array(
@@ -37,6 +54,14 @@ class PageController extends Controller
 
     public function contactAction(Request $request)
     {
+        $seoPage = $this->container->get('sonata.seo.page');
+        $seoPage
+            ->setTitle('contact')
+            ->addMeta('name', 'description', 'Contact page')
+            ->addMeta('property', 'og:description', 'Contact page')
+
+        ;
+
         $callform = $this->Call($request);
 
         $enquiry = new Enquiry();
@@ -70,6 +95,14 @@ class PageController extends Controller
 
     public function servicesAction(Request $request)
     {
+        $seoPage = $this->container->get('sonata.seo.page');
+        $seoPage
+            ->setTitle('services')
+            ->addMeta('name', 'description', 'services page')
+            ->addMeta('property', 'og:description', 'services page')
+
+        ;
+
         $callform = $this->Call($request);
 
         return $this->render('BloggerBlogBundle:Page:services.html.twig', array(
@@ -79,6 +112,13 @@ class PageController extends Controller
 
     public function seoAction(Request $request)
     {
+        $seoPage = $this->container->get('sonata.seo.page');
+        $seoPage
+            ->setTitle('seo')
+            ->addMeta('name', 'description', 'seo page')
+            ->addMeta('property', 'og:description', 'seo page')
+
+        ;
         $callform = $this->Call($request);
 
         $enquiry = new Enquiry();
@@ -112,6 +152,13 @@ class PageController extends Controller
 
     public function createAction(Request $request)
     {
+        $seoPage = $this->container->get('sonata.seo.page');
+        $seoPage
+            ->setTitle('create')
+            ->addMeta('name', 'description', 'create page')
+            ->addMeta('property', 'og:description', 'create page')
+
+        ;
         $callform = $this->Call($request);
 
         return $this->render('BloggerBlogBundle:Page:create.html.twig', array(
@@ -121,6 +168,13 @@ class PageController extends Controller
 
     public function supportAction(Request $request)
     {
+        $seoPage = $this->container->get('sonata.seo.page');
+        $seoPage
+            ->setTitle('support')
+            ->addMeta('name', 'description', 'support page')
+            ->addMeta('property', 'og:description', 'support page')
+
+        ;
         $callform = $this->Call($request);
 
         return $this->render('BloggerBlogBundle:Page:support.html.twig', array(
@@ -130,6 +184,13 @@ class PageController extends Controller
 
     public function programmerAction(Request $request)
     {
+        $seoPage = $this->container->get('sonata.seo.page');
+        $seoPage
+            ->setTitle('programmer')
+            ->addMeta('name', 'description', 'programmer page')
+            ->addMeta('property', 'og:description', 'programmer page')
+
+        ;
         $callform = $this->Call($request);
 
         return $this->render('BloggerBlogBundle:Page:programmer.html.twig', array(
@@ -139,6 +200,13 @@ class PageController extends Controller
 
     public function projectsAction(Request $request)
     {
+        $seoPage = $this->container->get('sonata.seo.page');
+        $seoPage
+            ->setTitle('projects')
+            ->addMeta('name', 'description', 'projects page')
+            ->addMeta('property', 'og:description', 'projects page')
+
+        ;
         $callform = $this->Call($request);
 
         return $this->render('BloggerBlogBundle:Page:projects.html.twig', array(
@@ -148,6 +216,13 @@ class PageController extends Controller
 
     public function confirmAction(Request $request)
     {
+        $seoPage = $this->container->get('sonata.seo.page');
+        $seoPage
+            ->setTitle('confirm')
+            ->addMeta('name', 'description', 'confirm page')
+            ->addMeta('property', 'og:description', 'confirm page')
+
+        ;
         $callform = $this->Call($request);
 
         return $this->render('BloggerBlogBundle:Page:confirm.html.twig', array(

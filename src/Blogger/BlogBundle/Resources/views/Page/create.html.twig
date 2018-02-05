@@ -8,11 +8,10 @@
 
 {% block body %}
 
-
     {#Заявка на создание сайта#}
     <a href="#win4">
         <div class="seo-mail">
-            <img src="/images/seo-mail.png" height="53px"/>
+            <img src="{{ asset('/images/seo-mail.png') }}" height="53px"/>
             <span class="text-left" style="font-size:15px;">Заявка на создание сайта</span>
         </div>
     </a>
@@ -66,14 +65,6 @@
         <a class="close" title="Закрыть" href="#close"></a>
     </div>
     {#Заявка на создание сайта#}
-
-
-
-    <ol class="breadcrumb" style="background-color: white;">
-        <li><a href="#">Главная</a></li>
-        <li><a href="{{ path('BloggerBlogBundle_services') }}" class="active">Услуги</a></li>
-        <li><a href="{{ path('BloggerBlogBundle_seo') }}" class="active">Создание сайтов</a></li>
-    </ol>
 
         <div class="container-fluid" >
             <div class="row" style="background-color: white;">

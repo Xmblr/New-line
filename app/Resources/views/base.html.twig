@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}Home{% endblock %} - New-Line</title>
+    {{ sonata_seo_title() }}
+    {{ sonata_seo_metadatas() }}
+    {#<meta charset="utf-8">#}
+    {#<meta http-equiv="X-UA-Compatible" content="IE=edge">#}
+    {#<meta name="viewport" content="width=device-width, initial-scale=1">#}
+    {#<title>{% block title %}Home{% endblock %} - New-Line</title>#}
     {% block stylesheets %}
         {% stylesheets '@bootstrap_css' %}
         <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
@@ -41,8 +43,8 @@
 <section id="wrapper">
 
 
-        {% block header %}
-    <header class="navbar navbar-custom navbar-custom-myheader" role="navigation">
+    {% block header %}
+        <header class="navbar navbar-custom navbar-custom-myheader" role="navigation">
                 <div class="container-fluid" style="padding:0% 0%;">
                     <div class="col-md-1">
                         <h3 class="header-logo" style="">{% block blog_title %}<a
@@ -60,7 +62,7 @@
                                 <span class="social-icons-header fa fa-phone" style="margin-left:10px;"
                                       data-toggle="dropdown" id="dropdownMenu1"></span>
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                        <li><a href="callto: +375291306545">+375 29 130-65-45</a></li>
+                                        <li><a href="callto: +375259119631">+375 25 911-96-31</a></li>
                                         <li class="divider"></li>
                                         <li><a href="#win3">Заказать звонок</a></li>
                                     </ul>
@@ -133,7 +135,7 @@
                                 <span class="social-icons-header fa fa-phone" style="margin-left:10px;"
                                       data-toggle="dropdown" id="dropdownMenu1"></span>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                    <li><a href="callto: 375291306545">+375 29 130-65-45</a></li>
+                                    <li><a href="callto: +375259119631">+375 25 911-96-31</a></li>
                                     <li class="divider"></li>
                                     <li><a href="#win3">Заказать звонок</a></li>
                                 </ul>
@@ -164,9 +166,12 @@
                 <!-- end container -->
 
             <!--END NAVBAR-->
-        {% endblock %}
-    </header>
 
+    </header>
+    {% endblock %}
+    {% block breadcrumb %}
+
+    {% endblock %}
     <section>
         {% block body %}
 
@@ -192,7 +197,7 @@ line-height: 70px;">NEW</br><span class="slogan-line">line</span></h3></div>
                     <div class="col-md-3">
                         <h3 style="color: white; font-size: 22px; text-transform: uppercase; font-family: Century Gothic; font-weight: 500; padding-bottom:3%; padding-top:10px; text-align: left;">
                             Контакты:</h3>
-                        <p class="footer-contacts" style="text-align:left;">+375 29 130-65-45</br>
+                        <p class="footer-contacts" style="text-align:left;">+375 25 911-96-31</br>
                             г. Минск ул. Жуковского 9/1</br>
                             ИП Кондратьева И.Е.</br>
                             УНП 192653478</br>

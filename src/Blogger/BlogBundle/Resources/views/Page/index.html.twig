@@ -1,6 +1,6 @@
 {# src/Blogger/BlogBundle/Resources/views/Page/index.html.twig #}
 
-{% extends 'BloggerBlogBundle::layout.html.twig' %}
+{% extends '::base.html.twig' %}
 
 {% block header %}
     <header id="header" style="position:relative;">
@@ -50,6 +50,7 @@
     <!--END NAVBAR-->
 {% endblock %}
 
+
 {% block body %}
 
     <div class="sticky">
@@ -79,9 +80,9 @@
                     <li>
                         <a href="{{ path('BloggerBlogBundle_about') }}">О нас</a>
                     </li>
-                    <li>
-                        <a href="{{ path('BloggerBlogBundle_services') }}">Услуги</a>
-                    </li>
+                    {#<li>#}
+                        {#<a href="{{ path('BloggerBlogBundle_services') }}">Услуги</a>#}
+                    {#</li>#}
                     <li>
                         <a href="{{ path('BloggerBlogBundle_projects') }}">Наши проекты</a>
                     </li>
