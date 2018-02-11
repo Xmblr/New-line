@@ -13,7 +13,7 @@
                     <span class="social-icons fa fa-phone" style="margin-left:10px;" data-toggle="dropdown"
                           id="dropdownMenu1"></span>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li><a href="callto: 375291306545">+375 29 130-65-45</a></li>
+                        <li><a href="callto:+375259119631">+375 25 911-96-31</a></li>
                         <li class="divider"></li>
                         <li><a href="#win3">Заказать звонок</a></li>
                     </ul>
@@ -25,11 +25,11 @@
                         <li><a href="mailto: ">info@new-line.by</a></li>
                     </ul>
                     </div>
-                    <span class="social-icons fa fa-facebook"></span>
-                    <span class="social-icons fa fa-vk"></span>
-                    <span class="social-icons fa fa-instagram"></span>
-                    <span class="social-icons fa fa-google"></span>
-                    <span class="social-icons fa fa-twitter"></span>
+                    <a href="https://www.facebook.com/newlineblr/" target="_blank"><span class="social-icons-header fa fa-facebook"></span></a>
+                    <a href="https://vk.com/club57918003" target="_blank"><span class="social-icons-header fa fa-vk"></span></a>
+                    <a href="https://www.instagram.com/new_line_blr/" target="_blank"><span class="social-icons-header fa fa-instagram"></span></a>
+                    <a href="https://plus.google.com/u/4/communities/101895513832349756196" target="_blank"><span class="social-icons-header fa fa-google"></span></a>
+                    <a href="https://twitter.com/New_line_blr" target="_blank"><span class="social-icons-header fa fa-twitter"></span></a>
 
                 </div>
             </div>
@@ -75,22 +75,40 @@
             <div class="navbar-collapse collapse" id="data-scroll">
                 <ul class="nav navbar-nav navbar-right" style="margin-top:0px;">
                     <li class="active">
-                        <a href="{{ path('BloggerBlogBundle_homepage') }}">Главная</a>
+                        <a href="{{ path('BloggerBlogBundle_homepage') }}" style="color:black;">Главная</a>
                     </li>
                     <li>
-                        <a href="{{ path('BloggerBlogBundle_about') }}">О нас</a>
+                        <a href="{{ path('BloggerBlogBundle_about') }}" style="color:black;">О нас</a>
                     </li>
-                    {#<li>#}
-                        {#<a href="{{ path('BloggerBlogBundle_services') }}">Услуги</a>#}
-                    {#</li>#}
-                    <li>
-                        <a href="{{ path('BloggerBlogBundle_projects') }}">Наши проекты</a>
+
+                    <li class="dropdown">
+
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle" style="color:black;">Услуги<b class="caret"></b></a>
+
+                        <ul class="dropdown-menu">
+
+                            <li><a href="{{ path('BloggerBlogBundle_create') }}">Создание сайтов</a></li>
+
+                            <li class="divider"></li>
+
+                            <li><a href="{{ path('BloggerBlogBundle_seo') }}">Продвижение сайтов</a></li>
+
+                            <li class="divider"></li>
+
+                            <li><a href="{{ path('BloggerBlogBundle_support') }}">Поддержка сайтов</a></li>
+
+                        </ul>
+
+                    </li>
+
+                    <li >
+                        <a href="{{ path('BloggerBlogBundle_projects') }}" style="color:black;">Наши проекты</a>
                     </li>
                     <li>
-                        <a href="{{ path('BloggerBlogBundle_blog') }}">Новости</a>
+                        <a href="{{ path('BloggerBlogBundle_blog') }}" style="color:black;">Новости</a>
                     </li>
                     <li>
-                        <a href="{{ path('BloggerBlogBundle_contact') }}">Контакты</a>
+                        <a href="{{ path('BloggerBlogBundle_contact') }}"  style="color:black;">Контакты</a>
                     </li>
                 </ul>
             </div>

@@ -14,10 +14,10 @@
 }
 
 .navbar-custom-myheader .navbar-nav li a {
-    color:white !important;
+    color:white;
 }
 .navbar-custom-myheader .navbar-nav li a:hover {
-    color:white;
+
 }
 
 .header-logo{

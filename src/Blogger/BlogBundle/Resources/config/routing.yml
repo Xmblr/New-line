@@ -41,7 +41,7 @@ BloggerBlogBundle_comment_create:
 
 
 BloggerBlogBundle_seo:
-    path:   /seo
+    path:   /seo-prodvizhenie-sajta
     defaults: { _controller: "BloggerBlogBundle:Page:seo" }
     requirements:
     methods:  GET|POST
@@ -53,7 +53,7 @@ BloggerBlogBundle_create:
     methods:  GET
 
 BloggerBlogBundle_support:
-    path:   /support
+    path:   /support-site
     defaults: { _controller: "BloggerBlogBundle:Page:support" }
     requirements:
     methods:  GET

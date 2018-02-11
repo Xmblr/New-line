@@ -414,6 +414,7 @@ p {
     /*-moz-transition: all 0.5s ease-in-out;*/
     /*-o-transition: all 0.5s ease-in-out;*/
     /*transition: all 0.5s ease-in-out;*/
+    border-bottom: 1px solid rgba(0,0,0,0.15);
 }
 
 .sticky-wrapper {
@@ -433,7 +434,7 @@ p {
     text-transform: uppercase;
 }
 @media (min-width:1260px) {.navbar-custom .navbar-nav li a {
-    color: black;
+    color: white;
     border-bottom: 3px solid transparent;
     background-color: transparent !important;
     /*margin: 0 8px;*/
@@ -448,6 +449,14 @@ p {
     width: 96%;
 }
 .navbar-custom .navbar-nav li a:hover,.navbar-custom .navbar-nav li a:focus,.navbar-custom .navbar-nav li a:active {
+border-color: none;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    background-image: none;
+}
+
+.navbar-custom .navbar-nav li ul li a {
     color: black;
 }
 
@@ -477,7 +486,11 @@ p {
 
 .nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
     background-color: transparent;
-    border-color: #337ab7;
+    border-color: none;
+}
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+    border-color:none;
 }
 
 

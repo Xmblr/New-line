@@ -7,6 +7,7 @@
     {#<meta http-equiv="X-UA-Compatible" content="IE=edge">#}
     {#<meta name="viewport" content="width=device-width, initial-scale=1">#}
     {#<title>{% block title %}Home{% endblock %} - New-Line</title>#}
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     {% block stylesheets %}
         {% stylesheets '@bootstrap_css' %}
         <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
@@ -80,11 +81,11 @@
                                 </div>
 
 
-                                <span class="social-icons-header fa fa-facebook"></span>
-                                <span class="social-icons-header fa fa-vk"></span>
-                                <span class="social-icons-header fa fa-instagram"></span>
-                                <span class="social-icons-header fa fa-google"></span>
-                                <span class="social-icons-header fa fa-twitter"></span>
+                                <a href="https://www.facebook.com/newlineblr/" target="_blank"><span class="social-icons-header fa fa-facebook"></span></a>
+                                <a href="https://vk.com/club57918003" target="_blank"><span class="social-icons-header fa fa-vk"></span></a>
+                                <a href="https://www.instagram.com/new_line_blr/" target="_blank"><span class="social-icons-header fa fa-instagram"></span></a>
+                                <a href="https://plus.google.com/u/4/communities/101895513832349756196" target="_blank"><span class="social-icons-header fa fa-google"></span></a>
+                                <a href="https://twitter.com/New_line_blr" target="_blank"><span class="social-icons-header fa fa-twitter"></span></a>
 
 
                             </div>
@@ -111,9 +112,27 @@
                                 <li>
                                     <a href="{{ path('BloggerBlogBundle_about') }}">О нас</a>
                                 </li>
-                                <li>
-                                    <a href="#">Услуги</a>
+
+                                <li class="dropdown">
+
+                                    <a style="border:none;" href="#" data-toggle="dropdown" class="dropdown-toggle">Услуги<b class="caret"></b></a>
+
+                                    <ul class="dropdown-menu">
+
+                                        <li><a href="{{ path('BloggerBlogBundle_create') }}">Создание сайтов</a></li>
+
+                                        <li class="divider"></li>
+
+                                        <li><a href="{{ path('BloggerBlogBundle_seo') }}">Продвижение сайтов</a></li>
+
+                                        <li class="divider"></li>
+
+                                        <li><a href="{{ path('BloggerBlogBundle_support') }}">Поддержка сайтов</a></li>
+
+                                    </ul>
+
                                 </li>
+
                                 <li>
                                     <a href="{{ path('BloggerBlogBundle_projects') }}">Наши проекты</a>
                                 </li>
@@ -153,11 +172,12 @@
                             </div>
 
 
-                            <span class="social-icons-header fa fa-facebook"></span>
-                            <span class="social-icons-header fa fa-vk"></span>
-                            <span class="social-icons-header fa fa-instagram"></span>
-                            <span class="social-icons-header fa fa-google"></span>
-                            <span class="social-icons-header fa fa-twitter"></span>
+
+                            <a href="https://www.facebook.com/newlineblr/" target="_blank"><span class="social-icons-header fa fa-facebook"></span></a>
+                            <a href="https://vk.com/club57918003" target="_blank"><span class="social-icons-header fa fa-vk"></span></a>
+                            <a href="https://www.instagram.com/new_line_blr/" target="_blank"><span class="social-icons-header fa fa-instagram"></span></a>
+                            <a href="https://plus.google.com/u/4/communities/101895513832349756196" target="_blank"><span class="social-icons-header fa fa-google"></span></a>
+                            <a href="https://twitter.com/New_line_blr" target="_blank"><span class="social-icons-header fa fa-twitter"></span></a>
 
 
                         </div>

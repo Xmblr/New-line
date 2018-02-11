@@ -20,9 +20,18 @@ class PageController extends Controller
     {
         $seoPage = $this->container->get('sonata.seo.page');
         $seoPage
-            ->setTitle('Index')
-            ->addMeta('name', 'description', 'Index page')
-            ->addMeta('property', 'og:description', 'Index page')
+            ->setTitle('Создание и продвижение сайтов в Минске - New-Line studio')
+            ->addMeta('name', 'description', 'New-line студия - это создание и продвижение сайтов в Минске. Мы работаем с лучшими. Отличные цены ✔ гарантия качества!')
+            ->addMeta('property', 'og:title', 'Создание и продвижение сайтов в Минске - New-Line studio')
+            ->addMeta('property', 'og:description', 'New-line студия - это создание и продвижение сайтов в Минске. Мы работаем с лучшими. Отличные цены ✔ гарантия качества!')
+            ->addMeta('property', 'og:url', 'http://new-line.by')
+            ->addMeta('property', 'og:locale', 'ru_RU')
+            ->addMeta('property', 'og:type', 'website')
+//          ->addMeta('property', 'og:image', '{{ path(\'BloggerBlogBundle_homepage\') }}')
+            ->addMeta('property', 'twitter:card', 'summary')
+            ->addMeta('property', 'twitter:description', 'New-line студия - это создание и продвижение сайтов в Минске. Мы работаем с лучшими. Отличные цены ✔ гарантия качества!')
+            ->addMeta('property', 'twitter:title', 'Создание и продвижение сайтов в Минске - New-Line studio')
+//            ->addMeta('property', 'twitter:image', '{{ path(\'BloggerBlogBundle_homepage\') }}')
 
         ;
 
@@ -39,10 +48,18 @@ class PageController extends Controller
     {
         $seoPage = $this->container->get('sonata.seo.page');
         $seoPage
-            ->setTitle('About')
-            ->addMeta('name', 'description', 'Index page')
-            ->addMeta('property', 'og:description', 'Index page')
-
+            ->setTitle('О компании - Студия создания и продвижения сайтов в Беларуси | New-line')
+            ->addMeta('name', 'description', 'Студия New-line - создание и продвижение сайтов в Беларуси. Отличные цены ✔ гарантия качества! Немного полезной информации о компании')
+            ->addMeta('property', 'og:title', 'О компании - Студия создания и продвижения сайтов в Беларуси | New-line')
+            ->addMeta('property', 'og:description', 'Студия New-line - создание и продвижение сайтов в Беларуси. Отличные цены ✔ гарантия качества! Немного полезной информации о компании')
+            ->addMeta('property', 'og:url', 'http://new-line.by/about')
+            ->addMeta('property', 'og:locale', 'ru_RU')
+            ->addMeta('property', 'og:type', 'website')
+//          ->addMeta('property', 'og:image', '{{ path(\'BloggerBlogBundle_homepage\') }}')
+            ->addMeta('property', 'twitter:card', 'summary')
+            ->addMeta('property', 'twitter:description', 'Студия New-line - создание и продвижение сайтов в Беларуси. Отличные цены ✔ гарантия качества! Немного полезной информации о компании')
+            ->addMeta('property', 'twitter:title', 'О компании - Студия создания и продвижения сайтов в Беларуси | New-line')
+//            ->addMeta('property', 'twitter:image', '{{ path(\'BloggerBlogBundle_homepage\') }}')
         ;
 
         $callform = $this->Call($request);
@@ -56,9 +73,18 @@ class PageController extends Controller
     {
         $seoPage = $this->container->get('sonata.seo.page');
         $seoPage
-            ->setTitle('contact')
-            ->addMeta('name', 'description', 'Contact page')
-            ->addMeta('property', 'og:description', 'Contact page')
+            ->setTitle('Контакты студии создания и продвижения сайтов - New-line')
+            ->addMeta('name', 'description', 'Контактные данные студии создания и продвижения сайтов в Минске, а также по Беларуси. Свяжитесь с нами и мы выполним проект любой сложности, за максимально короткие сроки.')
+            ->addMeta('property', 'og:title', 'Контакты студии создания и продвижения сайтов - New-line')
+            ->addMeta('property', 'og:description', 'Контактные данные студии создания и продвижения сайтов в Минске, а также по Беларуси. Свяжитесь с нами и мы выполним проект любой сложности, за максимально короткие сроки.')
+            ->addMeta('property', 'og:url', 'http://new-line.by/contact')
+            ->addMeta('property', 'og:locale', 'ru_RU')
+            ->addMeta('property', 'og:type', 'website')
+//          ->addMeta('property', 'og:image', '{{ path(\'BloggerBlogBundle_homepage\') }}')
+            ->addMeta('property', 'twitter:card', 'summary')
+            ->addMeta('property', 'twitter:description', 'Контактные данные студии создания и продвижения сайтов в Минске, а также по Беларуси. Свяжитесь с нами и мы выполним проект любой сложности, за максимально короткие сроки.')
+            ->addMeta('property', 'twitter:title', 'Контакты студии создания и продвижения сайтов - New-line')
+//          ->addMeta('property', 'twitter:image', '{{ path(\'BloggerBlogBundle_homepage\') }}')
 
         ;
 
@@ -93,30 +119,24 @@ class PageController extends Controller
         ));
     }
 
-    public function servicesAction(Request $request)
-    {
-        $seoPage = $this->container->get('sonata.seo.page');
-        $seoPage
-            ->setTitle('services')
-            ->addMeta('name', 'description', 'services page')
-            ->addMeta('property', 'og:description', 'services page')
 
-        ;
-
-        $callform = $this->Call($request);
-
-        return $this->render('BloggerBlogBundle:Page:services.html.twig', array(
-            'callform' =>$callform->createView()
-        ));
-    }
 
     public function seoAction(Request $request)
     {
         $seoPage = $this->container->get('sonata.seo.page');
         $seoPage
-            ->setTitle('seo')
-            ->addMeta('name', 'description', 'seo page')
-            ->addMeta('property', 'og:description', 'seo page')
+            ->setTitle('Seo продвижение сайта в топ - Эффективная раскрутка сайта в поисковых системах')
+            ->addMeta('name', 'description', 'Seo продвижение сайта в топ поисковых систем - Google и Yandex. Только белые методы СЕО. Работаем по Беларуси, а также по России. Компадна опытных специалистов обеспечит эффективную расскрутку вашего сайта в поисковых системах за оптимальную цену.')
+            ->addMeta('property', 'og:title', 'Seo продвижение сайта в топ - Эффективная раскрутка сайта в поисковых системах')
+            ->addMeta('property', 'og:description', 'Seo продвижение сайта в топ поисковых систем - Google и Yandex. Только белые методы СЕО. Работаем по Беларуси, а также по России. Компадна опытных специалистов обеспечит эффективную расскрутку вашего сайта в поисковых системах за оптимальную цену.')
+            ->addMeta('property', 'og:url', 'http://new-line.by/seo-prodvizhenie-sajta')
+            ->addMeta('property', 'og:locale', 'ru_RU')
+            ->addMeta('property', 'og:type', 'website')
+//          ->addMeta('property', 'og:image', '{{ path(\'BloggerBlogBundle_homepage\') }}')
+            ->addMeta('property', 'twitter:card', 'summary')
+            ->addMeta('property', 'twitter:description', 'Seo продвижение сайта в топ поисковых систем - Google и Yandex. Только белые методы СЕО. Работаем по Беларуси, а также по России. Компадна опытных специалистов обеспечит эффективную расскрутку вашего сайта в поисковых системах за оптимальную цену.')
+            ->addMeta('property', 'twitter:title', 'Seo продвижение сайта в топ - Эффективная раскрутка сайта в поисковых системах')
+//          ->addMeta('property', 'twitter:image', '{{ path(\'BloggerBlogBundle_homepage\') }}')
 
         ;
         $callform = $this->Call($request);
@@ -154,9 +174,18 @@ class PageController extends Controller
     {
         $seoPage = $this->container->get('sonata.seo.page');
         $seoPage
-            ->setTitle('create')
-            ->addMeta('name', 'description', 'create page')
-            ->addMeta('property', 'og:description', 'create page')
+            ->setTitle('Создание сайтов в Минске, отличные цены - Разработка сайтов в Минске')
+            ->addMeta('name', 'description', 'Создание сайтов в Минске, а также по РБ ✔ любой сложности. Наши специалисты выполнят любой проект за максимально короткие сроки. Гарантия качества! Разработка сайтов в Минске - New-line studio.')
+            ->addMeta('property', 'og:title', 'Создание сайтов в Минске, отличные цены - Разработка сайтов в Минске')
+            ->addMeta('property', 'og:description', 'Создание сайтов в Минске, а также по РБ ✔ любой сложности. Наши специалисты выполнят любой проект за максимально короткие сроки. Гарантия качества! Разработка сайтов в Минске - New-line studio.')
+            ->addMeta('property', 'og:url', 'http://new-line.by/create-new-site')
+            ->addMeta('property', 'og:locale', 'ru_RU')
+            ->addMeta('property', 'og:type', 'website')
+//          ->addMeta('property', 'og:image', '{{ path(\'BloggerBlogBundle_homepage\') }}')
+            ->addMeta('property', 'twitter:card', 'summary')
+            ->addMeta('property', 'twitter:description', 'Создание сайтов в Минске, а также по РБ ✔ любой сложности. Наши специалисты выполнят любой проект за максимально короткие сроки. Гарантия качества! Разработка сайтов в Минске - New-line studio.')
+            ->addMeta('property', 'twitter:title', 'Создание сайтов в Минске, отличные цены - Разработка сайтов в Минске')
+//          ->addMeta('property', 'twitter:image', '{{ path(\'BloggerBlogBundle_homepage\') }}')
 
         ;
         $callform = $this->Call($request);
@@ -170,9 +199,18 @@ class PageController extends Controller
     {
         $seoPage = $this->container->get('sonata.seo.page');
         $seoPage
-            ->setTitle('support')
-            ->addMeta('name', 'description', 'support page')
-            ->addMeta('property', 'og:description', 'support page')
+            ->setTitle('Создание сайтов в Минске, отличные цены - Разработка сайтов в Минске')
+            ->addMeta('name', 'description', 'Поддержка сайтов в Минске, а также по РБ ✔ гарантия качества! Наша команда специалистов выполнит поддержку сайтов по оптимальной для вас цене - New-line studio')
+            ->addMeta('property', 'og:title', 'Создание сайтов в Минске, отличные цены - Разработка сайтов в Минске')
+            ->addMeta('property', 'og:description', 'Поддержка сайтов в Минске, а также по РБ ✔ гарантия качества! Наша команда специалистов выполнит поддержку сайтов по оптимальной для вас цене - New-line studio')
+            ->addMeta('property', 'og:url', 'http://new-line.by/support-site')
+            ->addMeta('property', 'og:locale', 'ru_RU')
+            ->addMeta('property', 'og:type', 'website')
+//          ->addMeta('property', 'og:image', '{{ path(\'BloggerBlogBundle_homepage\') }}')
+            ->addMeta('property', 'twitter:card', 'summary')
+            ->addMeta('property', 'twitter:description', 'Поддержка сайтов в Минске, а также по РБ ✔ гарантия качества! Наша команда специалистов выполнит поддержку сайтов по оптимальной для вас цене - New-line studio')
+            ->addMeta('property', 'twitter:title', 'Создание сайтов в Минске, отличные цены - Разработка сайтов в Минске')
+//          ->addMeta('property', 'twitter:image', '{{ path(\'BloggerBlogBundle_homepage\') }}')
 
         ;
         $callform = $this->Call($request);
@@ -202,9 +240,18 @@ class PageController extends Controller
     {
         $seoPage = $this->container->get('sonata.seo.page');
         $seoPage
-            ->setTitle('projects')
-            ->addMeta('name', 'description', 'projects page')
-            ->addMeta('property', 'og:description', 'projects page')
+            ->setTitle('Наши выполненные проекты по созданию и продвижению сайтов | New-line studio')
+            ->addMeta('name', 'description', 'В данном разделе Вы найдете наши выполненные работы. Хотите себе сайт? Хотите быть в Топах поисковых систем? Вы попали по адресу - гарантия качества!')
+            ->addMeta('property', 'og:title', 'Наши выполненные проекты по созданию и продвижению сайтов | New-line studio')
+            ->addMeta('property', 'og:description', 'В данном разделе Вы найдете наши выполненные работы. Хотите себе сайт? Хотите быть в Топах поисковых систем? Вы попали по адресу - гарантия качества!')
+            ->addMeta('property', 'og:url', 'http://new-line.by/projects')
+            ->addMeta('property', 'og:locale', 'ru_RU')
+            ->addMeta('property', 'og:type', 'website')
+//          ->addMeta('property', 'og:image', '{{ path(\'BloggerBlogBundle_homepage\') }}')
+            ->addMeta('property', 'twitter:card', 'summary')
+            ->addMeta('property', 'twitter:description', 'В данном разделе Вы найдете наши выполненные работы. Хотите себе сайт? Хотите быть в Топах поисковых систем? Вы попали по адресу - гарантия качества!')
+            ->addMeta('property', 'twitter:title', 'Наши выполненные проекты по созданию и продвижению сайтов | New-line studio')
+//          ->addMeta('property', 'twitter:image', '{{ path(\'BloggerBlogBundle_homepage\') }}')
 
         ;
         $callform = $this->Call($request);
