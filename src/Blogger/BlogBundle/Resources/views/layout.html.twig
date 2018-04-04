@@ -22,3 +22,39 @@
         {#<li>Продвижение сайтов</li>#}
     {#</ol>#}
 {% endblock %}
+
+{% block callback %}
+    {#Заявка на Обратный звонок#}
+    <a href="#win3">
+        <div class="phone-call">
+            <img src="{{ asset('/images/phone.png') }}" height="53px"/>
+            <span class="text-left" style="font-size:15px;">Заказать обратный звонок</span>
+        </div>
+    </a>
+
+    <a href="#x" class="overlay" id="win3">
+    </a>
+    <div class="popup" style="max-width:500px; text-align:center;">
+        <div class="section bg-gray-light container-fluid" style="padding-top: 10px; padding-bottom: 10px; padding:0%;">
+            <h2>Заказ обратного звонка</h2>
+            <div class="container-fluid">
+
+                {{ form_start(callform, { 'action': path('BloggerBlogBundle_confirm'), 'method': 'POST' }) }}
+                {{ form_errors(callform) }}
+
+                <div class="form-group">
+                    {{ form_widget(callform.name, {'attr':{'class':'form-control','placeholder':'Как вас зовут?'}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_widget(callform.phone, {'attr':{'class':'form-control','placeholder':'Номер телефона'}}) }}
+                </div>
+                <input type="submit" class="submitBnt btn btn-custom" value="Отправить" style="color:black;">
+                {{ form_end(callform) }}
+            </div>
+        </div>
+
+        <a class="close" title="Закрыть" href="#close"></a>
+    </div>
+    {#Заявка на обратный звонок#}
+{% endblock %}
+

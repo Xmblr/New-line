@@ -35,14 +35,13 @@ body {
 }
 h1,h2,h3,h4,h5,h6 {
     font-family: Century Gothic;
-    margin-top: 2%;
+
     margin-bottom:2%;
     text-align: center;
 }
 
 .h1,.h2,.h3,.h4,.h5,.h6 {
     font-family: Century Gothic;
-    margin-top: 2%;
     margin-bottom:2%;
     text-align: center;
 }
@@ -404,7 +403,7 @@ p {
     width: 90%;
 }
 .navbar-custom{
-    padding: 20px 0px;
+    padding: 10px 0px;
     width: 100%;
     border-radius: 0px;
     z-index: 1;
@@ -595,28 +594,28 @@ border-color: none;
 }
 
 #first-slider .carousel .item {
-    height: 60vh;
+    height: 500px;
     width: 50%;
     left: 25%;
     padding-top: 5%;
 
 }
 
-@media (max-width: 770px) {
+@media (max-width: 400px) {
     #first-slider .carousel .item {
-        height: 45vh;
+        height: 250px;
         width: 90%;
         left: 5%;
-        top:5vh;
+        margin-top:20px;
     }
 }
 
-@media (max-width: 1060px) and (min-width:770px) {
+@media (max-width: 1060px) and (min-width:767px) {
     #first-slider .carousel .item {
-        height: 45vh;
-        width: 50%;
-        left: 25%;
-        top:2vh;
+        height: 420px;
+        width: 70%;
+        left: 15%;
+        margin-top:10px;
     }
 }
 
@@ -1131,6 +1130,15 @@ border-color: none;
 /*=====================================
   19.RESPONSIVE
 ====================================*/
+
+@media (min-width:400px) and (max-width: 767px) {
+    #first-slider .carousel .item {
+        height: 350px;
+        width: 90%;
+        left: 5%;
+        margin-top:20px;
+    }}
+
 @media (max-width: 768px){
     .section{
         padding-top: 40px;
@@ -1207,8 +1215,17 @@ border-color: none;
         top:0px !important;
     }
     #first-slider .carousel-control {
-        display: none;
+
     }
+
+    #first-slider .carousel-control.left {
+        left:5%;
+    }
+
+    #first-slider .carousel-control.right {
+        right: 5%;
+    }
+
     .filter-list a {
         margin:5px 0px;
     }

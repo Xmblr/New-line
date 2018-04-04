@@ -21,6 +21,7 @@ class Builder implements ContainerAwareInterface
         $menu->addChild('Поддержка сайтов', array('route' => 'BloggerBlogBundle_support'));
         $menu->addChild('Услуги программиста', array('route' => 'BloggerBlogBundle_programmer'));
         $menu->addChild('Наши проекты', array('route' => 'BloggerBlogBundle_projects'));
+        $menu['Продвижение сайтов']->addChild('Продвижение сайтов топ 10', array('route'=>'BloggerBlogBundle_seotopten'));
 
         // access services from the container!
 //        $em = $this->container->get('doctrine')->getManager();

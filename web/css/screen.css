@@ -876,7 +876,7 @@ display:none;}
 
 .infographic-block-left:before {
     float: left;
-    right: -50px;
+    right: -49px;
     content: '';
     position: absolute;
     border-top-color: rgb(204, 204, 204);
@@ -1089,4 +1089,25 @@ header {
     .seo-mail {
         top: 50%;
     }
+}
+
+.medium-text {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-family: Century Gothic;
+    font-weight: 500;
+    line-height: 1.5;
+    padding: 3% 0%;
+}
+
+@media (max-width: 768px) {
+
+    .medium-text {
+        font-size: 15px;
+    }
+}
+
+.footer-contacts li a {
+    color:white;
 }

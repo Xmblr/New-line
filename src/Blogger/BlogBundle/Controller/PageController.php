@@ -16,21 +16,30 @@ use Swift_Message;
 
 class PageController extends Controller
 {
+
+    public function Logo()
+    {
+        return $logo = 'http://new-line.by/images/logo/logo.png';
+    }
+
     public function indexAction(Request $request)
     {
+        $description = 'New-line студия - это создание и продвижение сайтов в Минске. Мы работаем с лучшими. Отличные цены ✔ гарантия качества!';
+        $title = 'Создание и продвижение сайтов в Минске - New-Line studio';
+
         $seoPage = $this->container->get('sonata.seo.page');
         $seoPage
             ->setTitle('Создание и продвижение сайтов в Минске - New-Line studio')
-            ->addMeta('name', 'description', 'New-line студия - это создание и продвижение сайтов в Минске. Мы работаем с лучшими. Отличные цены ✔ гарантия качества!')
-            ->addMeta('property', 'og:title', 'Создание и продвижение сайтов в Минске - New-Line studio')
-            ->addMeta('property', 'og:description', 'New-line студия - это создание и продвижение сайтов в Минске. Мы работаем с лучшими. Отличные цены ✔ гарантия качества!')
-            ->addMeta('property', 'og:url', 'http://new-line.by')
+            ->addMeta('name', 'description', $description)
+            ->addMeta('property', 'og:title', $title)
+            ->addMeta('property', 'og:description', $description)
+            ->addMeta('property', 'og:url', '/')
             ->addMeta('property', 'og:locale', 'ru_RU')
             ->addMeta('property', 'og:type', 'website')
-//          ->addMeta('property', 'og:image', '{{ path(\'BloggerBlogBundle_homepage\') }}')
+            ->addMeta('property', 'og:image', $this->Logo() )
             ->addMeta('property', 'twitter:card', 'summary')
-            ->addMeta('property', 'twitter:description', 'New-line студия - это создание и продвижение сайтов в Минске. Мы работаем с лучшими. Отличные цены ✔ гарантия качества!')
-            ->addMeta('property', 'twitter:title', 'Создание и продвижение сайтов в Минске - New-Line studio')
+            ->addMeta('property', 'twitter:description', $description)
+            ->addMeta('property', 'twitter:title', $title)
 //            ->addMeta('property', 'twitter:image', '{{ path(\'BloggerBlogBundle_homepage\') }}')
 
         ;
@@ -97,18 +106,31 @@ class PageController extends Controller
         if ($request->isMethod($request::METHOD_POST)) {
 
             $form->handleRequest($request);
+
             if ($form->isValid()) {
+                if ($enquiry->getPhone()!=null)
+                {
+                    $request->getSession()
+                        ->getFlashBag()
+                        ->add('success', 'Обнаружен спам')
+                    ;
+                    // Redirect - This is important to prevent users re-posting
+                    // the form if they refresh the page
+                    return $this->redirect($this->generateUrl('BloggerBlogBundle_contact'));
+                }
+                else
+                {
+                    $this->Mailer($enquiry);
 
-                $this->Mailer($enquiry);
+                    $request->getSession()
+                        ->getFlashBag()
+                        ->add('success', 'Ваше сообщение успешно отправлено.')
+                    ;
+                    // Redirect - This is important to prevent users re-posting
+                    // the form if they refresh the page
+                    return $this->redirect($this->generateUrl('BloggerBlogBundle_contact'));
 
-                $request->getSession()
-                    ->getFlashBag()
-                    ->add('success', 'Ваше сообщение успешно отправлено.')
-                ;
-                // Redirect - This is important to prevent users re-posting
-                // the form if they refresh the page
-                return $this->redirect($this->generateUrl('BloggerBlogBundle_contact'));
-
+                }
             }
 
         }
@@ -274,6 +296,174 @@ class PageController extends Controller
 
         return $this->render('BloggerBlogBundle:Page:confirm.html.twig', array(
             'callform' =>$callform->createView()
+        ));
+    }
+
+    public function seoyandexAction(Request $request)
+    {
+        $seoPage = $this->container->get('sonata.seo.page');
+        $seoPage
+            ->setTitle('Продвижение сайтов в Яндекс топ - Seo Яндекс поисковое продвижение
+')
+            ->addMeta('name', 'description', 'Поисковое продвижение сайтов в Яндекс в топ. Гарантия качества, работаем по Беларуси, а также по России. Успешная команда специалистов с большим опытом выполнит seo продвижение вашего сайта в Яндексе. Мы используем только белые методы.
+')
+            ->addMeta('property', 'og:description', 'Поисковое продвижение сайтов в Яндекс в топ. Гарантия качества, работаем по Беларуси, а также по России. Успешная команда специалистов с большим опытом выполнит seo продвижение вашего сайта в Яндексе. Мы используем только белые методы.
+')
+
+        ;
+        $callform = $this->Call($request);
+
+        $enquiry = new Enquiry();
+
+        $form = $this->createForm(EnquiryType::class, $enquiry);
+
+        if ($request->isMethod($request::METHOD_POST)) {
+
+            $form->handleRequest($request);
+            if ($form->isValid()) {
+
+                $this->Mailer($enquiry);
+
+                $request->getSession()
+                    ->getFlashBag()
+                    ->add('success', 'Ваше сообщение успешно отправлено.')
+                ;
+                // Redirect - This is important to prevent users re-posting
+                // the form if they refresh the page
+                return $this->redirect($this->generateUrl('BloggerBlogBundle_seo'));
+
+            }
+
+        }
+
+        return $this->render('BloggerBlogBundle:Page:seoyandex.html.twig', array(
+            'callform' =>$callform->createView(),
+            'form' => $form->createView()
+        ));
+    }
+
+    public function websajtiAction(Request $request)
+    {
+        $seoPage = $this->container->get('sonata.seo.page');
+        $seoPage
+            ->setTitle('Продвижение Web-сайтов в топ - раскрутка web-сайтов по выгодным ценам')
+            ->addMeta('name', 'description', 'Поисковое продвижение web-сайтов в топ Google и Яндекс по выгодным для вас ценам. Работаем по Беларуси, а также России. Команда наших специалистов, с большом опытом раскрутки web-сайтов обеспечит высокое качество выполненных работ. Только белые методы.')
+            ->addMeta('property', 'og:description', 'Поисковое продвижение web-сайтов в топ Google и Яндекс по выгодным для вас ценам. Работаем по Беларуси, а также России. Команда наших специалистов, с большом опытом раскрутки web-сайтов обеспечит высокое качество выполненных работ. Только белые методы.
+')
+
+        ;
+        $callform = $this->Call($request);
+
+        $enquiry = new Enquiry();
+
+        $form = $this->createForm(EnquiryType::class, $enquiry);
+
+        if ($request->isMethod($request::METHOD_POST)) {
+
+            $form->handleRequest($request);
+            if ($form->isValid()) {
+
+                $this->Mailer($enquiry);
+
+                $request->getSession()
+                    ->getFlashBag()
+                    ->add('success', 'Ваше сообщение успешно отправлено.')
+                ;
+                // Redirect - This is important to prevent users re-posting
+                // the form if they refresh the page
+                return $this->redirect($this->generateUrl('BloggerBlogBundle_seo'));
+
+            }
+
+        }
+
+        return $this->render('BloggerBlogBundle:Page:websajti.html.twig', array(
+            'callform' =>$callform->createView(),
+            'form' => $form->createView()
+        ));
+    }
+
+    public function priceseoAction(Request $request)
+    {
+        $seoPage = $this->container->get('sonata.seo.page');
+        $seoPage
+            ->setTitle('Продвижение сайта, цены - Стоимость продвижения сайта в топ
+')
+            ->addMeta('name', 'description', 'Продвижение сайта, цены ниже рыночных. Успешная команда специалистов с большим опытом выполнит продвижение вашего сайта по отличной цене и за максимально короткие сроки. Узнайте стоимость продвижения вашего сайта на нашем сайте. ')
+            ->addMeta('property', 'og:description', 'Продвижение сайта, цены ниже рыночных. Успешная команда специалистов с большим опытом выполнит продвижение вашего сайта по отличной цене и за максимально короткие сроки. Узнайте стоимость продвижения вашего сайта на нашем сайте. 
+')
+
+        ;
+        $callform = $this->Call($request);
+
+        $enquiry = new Enquiry();
+
+        $form = $this->createForm(EnquiryType::class, $enquiry);
+
+        if ($request->isMethod($request::METHOD_POST)) {
+
+            $form->handleRequest($request);
+            if ($form->isValid()) {
+
+                $this->Mailer($enquiry);
+
+                $request->getSession()
+                    ->getFlashBag()
+                    ->add('success', 'Ваше сообщение успешно отправлено.')
+                ;
+                // Redirect - This is important to prevent users re-posting
+                // the form if they refresh the page
+                return $this->redirect($this->generateUrl('BloggerBlogBundle_seo'));
+
+            }
+
+        }
+
+        return $this->render('BloggerBlogBundle:Page:priceseo.html.twig', array(
+            'callform' =>$callform->createView(),
+            'form' => $form->createView()
+        ));
+    }
+
+    public function seotoptenAction(Request $request)
+    {
+        $seoPage = $this->container->get('sonata.seo.page');
+        $seoPage
+            ->setTitle('Продвижение сайтов в топ 10 - New-line studio')
+            ->addMeta('name', 'description', 'Продвижение сайтов в топ 10 поисковых систем google и яндекс по выгодным ценам. Наша команда опытных специалистов продвинет ваш сайт в топ 10 поисковых систем. Только белые методы, работа по Беларуси и России.
+')
+            ->addMeta('property', 'og:description', 'Продвижение сайтов в топ 10 поисковых систем google и яндекс по выгодным ценам. Наша команда опытных специалистов продвинет ваш сайт в топ 10 поисковых систем. Только белые методы, работа по Беларуси и России. 
+')
+
+        ;
+        $callform = $this->Call($request);
+
+        $enquiry = new Enquiry();
+
+        $form = $this->createForm(EnquiryType::class, $enquiry);
+
+        if ($request->isMethod($request::METHOD_POST)) {
+
+            $form->handleRequest($request);
+            if ($form->isValid()) {
+
+                $this->Mailer($enquiry);
+
+                $request->getSession()
+                    ->getFlashBag()
+                    ->add('success', 'Ваше сообщение успешно отправлено.')
+                ;
+                // Redirect - This is important to prevent users re-posting
+                // the form if they refresh the page
+                return $this->redirect($this->generateUrl('BloggerBlogBundle_seo'));
+
+            }
+
+        }
+
+        return $this->render('BloggerBlogBundle:Page:seotopten.html.twig', array(
+            'callform' =>$callform->createView(),
+            'form' => $form->createView()
         ));
     }
 

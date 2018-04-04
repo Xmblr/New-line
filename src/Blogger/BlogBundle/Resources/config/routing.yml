@@ -75,3 +75,28 @@ BloggerBlogBundle_confirm:
     defaults: { _controller: "BloggerBlogBundle:Page:confirm" }
     requirements:
     methods:  GET|POST
+
+BloggerBlogBundle_seoyandex:
+    path:   /seo-prodvizhenie-sajta/prodvizhenie-sajta-v-yandex
+    defaults: { _controller: "BloggerBlogBundle:Page:seoyandex" }
+    requirements:
+    methods:  GET|POST
+
+BloggerBlogBundle_websajti:
+    path:   /seo-prodvizhenie-sajta/prodvizhenie-web-sajtov
+    defaults: { _controller: "BloggerBlogBundle:Page:websajti" }
+    requirements:
+    methods:  GET|POST
+
+BloggerBlogBundle_priceseo:
+    path:   /seo-prodvizhenie-sajta/ceny-na-prodvizhenie-sajta
+    defaults: { _controller: "BloggerBlogBundle:Page:priceseo" }
+    requirements:
+    methods:  GET|POST
+
+BloggerBlogBundle_seotopten:
+    path:   /seo-prodvizhenie-sajta/prodvizhenie-sajtov-v-top-10
+    defaults: { _controller: "BloggerBlogBundle:Page:seotopten" }
+    requirements:
+    methods:  GET|POST
+
