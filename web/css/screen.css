@@ -117,7 +117,7 @@ hgroup:hover {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 400px) {
     hgroup {
         background-position-x: -350px;
     }
@@ -185,6 +185,7 @@ hgroup:hover {
     padding-top: 70px;
     font-weight: 500;
     line-height: 1.5;
+    margin:10px;
 }
 
 .social-icons {
@@ -361,7 +362,6 @@ hgroup:hover {
     color: white;
     font-size: 17px;
     text-transform: uppercase;
-    text-align: left;
     font-family: Century Gothic;
     font-weight: 500;
     line-height: 1.5;
@@ -558,11 +558,13 @@ display:none;}
 }
 
 .icon-social-mobile {
-    margin: 1.8% auto;
+
     display: inline-block;
     margin-right: 15px;
     padding-left: 5px;
     float: right;
+    line-height: 40px;
+    vertical-align: middle;
 
 
 }
@@ -573,7 +575,7 @@ display:none;}
     float: left;
     padding: 9px 10px;
     margin-left: 5px;
-    margin-bottom: 8px;
+    margin-bottom: 2px;
     background-color: transparent;
     background-image: none;
     border: 1px solid transparent;
@@ -1106,8 +1108,36 @@ header {
     .medium-text {
         font-size: 15px;
     }
+    .navbar-right li a
+    {color:white;}
 }
+
+
 
 .footer-contacts li a {
     color:white;
+}
+
+.logo-home {
+    text-align:center;
+    margin: 55px;
+    width:auto;
+}
+
+.logo-home img {
+    max-height: 230px;
+}
+
+@media (max-width: 420px) {
+    .logo-home {
+        margin: 40px;
+    }
+    .logo-home img {
+        width: 100%;
+    }
+
+}
+
+.nav > li > a:hover {
+    background-color: none;
 }

@@ -28,7 +28,6 @@
     /* фиксированное позиционирование, окно стабильно при прокрутке */
     position: fixed;
     padding: 15px;
-    border: 1px solid #383838;
     background: #fefefe;
     /* скругление углов */
     -webkit-border-radius: 4px;

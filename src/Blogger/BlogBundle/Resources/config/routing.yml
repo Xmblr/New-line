@@ -50,13 +50,13 @@ BloggerBlogBundle_create:
     path:   /create-new-site
     defaults: { _controller: "BloggerBlogBundle:Page:create" }
     requirements:
-    methods:  GET
+    methods:  GET|POST
 
 BloggerBlogBundle_support:
     path:   /support-site
     defaults: { _controller: "BloggerBlogBundle:Page:support" }
     requirements:
-    methods:  GET
+    methods:  GET|POST
 
 BloggerBlogBundle_programmer:
     path:   /programmer

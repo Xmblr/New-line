@@ -1,7 +1,33 @@
-{# src/Blogger/BlogBundle/Resources/views/Page/contactEmail.txt.twig #}
-Запрос из формы обратной связи {{ enquiry.name }} в {{ "now" | date("Y-m-d H:i") }}.
+{% if enquiry.type is defined %}  {# создание сайта#}
 
-Адрес для связи: {{ enquiry.email }}
-Тема: {{ enquiry.subject }}
-Письмо:
-{{ enquiry.body }}
+    Запрос из формы создания сайта {{ enquiry.name }} в {{ "now" | date("Y-m-d H:i") }}.
+
+    Адрес для связи: {{ enquiry.email }}
+    Телефон: {{ enquiry.phone }}
+    Тип сайта: {{ enquiry.type }}
+
+{% elseif enquiry.package is defined %} {# поддержка сайта#}
+
+    Запрос из формы поддержки сайта {{ enquiry.name }} в {{ "now" | date("Y-m-d H:i") }}.
+
+    Адрес для связи: {{ enquiry.email }}
+    Телефон: {{ enquiry.phone }}
+    Пакет: {{ enquiry.package }}
+
+{% elseif enquiry.site is defined %} {# продвижение сайта#}
+
+    Запрос из формы продвижения сайта {{ enquiry.name }} в {{ "now" | date("Y-m-d H:i") }}.
+
+    Адрес для связи: {{ enquiry.email }}
+    Телефон: {{ enquiry.phone }}
+    Сайт: {{ enquiry.site }}
+
+{% else %}
+
+    Запрос из формы обратной связи {{ enquiry.name }} в {{ "now" | date("Y-m-d H:i") }}.
+
+    Адрес для связи: {{ enquiry.email }}
+    Тема: {{ enquiry.subject }}
+    Письмо:
+    {{ enquiry.body }}
+{% endif %}

@@ -403,7 +403,7 @@ p {
     width: 90%;
 }
 .navbar-custom{
-    padding: 10px 0px;
+    padding: 13px 0px;
     width: 100%;
     border-radius: 0px;
     z-index: 1;
@@ -1140,6 +1140,15 @@ border-color: none;
     }}
 
 @media (max-width: 768px){
+    footer .col-md-3 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    footer h3 {
+        text-align: center;
+
+    }
     .section{
         padding-top: 40px;
         padding-bottom: 40px;
@@ -1361,4 +1370,15 @@ h2 {
 }
 .block-content:hover {
     transform: scale(1.02);
+}
+
+@media (min-width: 768px) {
+    footer h3 {
+        text-align: left;
+    }
+}
+
+.our-sites {
+    background-image: url('/images/fon-slide.jpg');
+    background-size: 100% auto;
 }

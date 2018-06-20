@@ -1,6 +1,6 @@
 {# src/Blogger/BlogBundle/Resources/views/Page/index.html.twig #}
 
-{% extends '::base.html.twig' %}
+{% extends 'BloggerBlogBundle::layout.html.twig' %}
 
 {% block header %}
     <header id="header" style="position:relative;">
@@ -35,11 +35,17 @@
             </div>
 
             <p class="text-header">Создание и продвижение сайтов</p>
-            <h2 style="padding-bottom:40px; ">{% block blog_title %}<a href="{{ path('BloggerBlogBundle_homepage') }}">
+            <div class="logo-home" >
+                <img src="images/logo/logo-white.png"/>
+            </div>
+            <!--
+            <h2 style="padding-bottom:40px; margin-top: 2%;">{% block blog_title %}<a href="{{ path('BloggerBlogBundle_homepage') }}">
                         NEW</br><span class="slogan-line">line</span></a>{% endblock %}</h2>
-
+            -->
             <a href="#win3" class="boot">
-                <span>Заказать звонок</span></a>
+                <span>Заказать звонок</span>
+            </a>
+
         </hgroup>
 
 
@@ -50,6 +56,35 @@
     <!--END NAVBAR-->
 {% endblock %}
 
+{% block breadcrumb %}
+
+{% endblock %}
+
+{% block callback %}
+    <a href="#x" class="overlay" id="win3">
+    </a>
+    <div class="popup" style="max-width:500px; text-align:center;">
+        <div class="section bg-gray-light container-fluid" style="padding-top: 10px; padding-bottom: 10px; padding:0%;">
+            <h2>Заказ обратного звонка</h2>
+            <div class="container-fluid">
+
+                {{ form_start(callform, { 'action': path('BloggerBlogBundle_confirm'), 'method': 'POST' }) }}
+                {{ form_errors(callform) }}
+
+                <div class="form-group">
+                    {{ form_widget(callform.name, {'attr':{'class':'form-control','placeholder':'Как вас зовут?'}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_widget(callform.phone, {'attr':{'class':'form-control','placeholder':'Номер телефона'}}) }}
+                </div>
+                <input type="submit" class="submitBnt btn btn-custom" value="Отправить" style="color:black;">
+                {{ form_end(callform) }}
+            </div>
+        </div>
+
+        <a class="close" title="Закрыть" href="#close"></a>
+    </div>
+{% endblock %}
 
 {% block body %}
 
@@ -104,9 +139,9 @@
                     <li >
                         <a href="{{ path('BloggerBlogBundle_projects') }}" style="color:black;">Наши проекты</a>
                     </li>
-                    <li>
+                    <!--<li>
                         <a href="{{ path('BloggerBlogBundle_blog') }}" style="color:black;">Новости</a>
-                    </li>
+                    </li>-->
                     <li>
                         <a href="{{ path('BloggerBlogBundle_contact') }}"  style="color:black;">Контакты</a>
                     </li>
@@ -118,9 +153,10 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="container-fluid">
-            <div class="col-md-4" style="margin-bottom:7%;">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4" style="margin-bottom:20px;">
                 <a href="{{ path('BloggerBlogBundle_create') }}"><div class="square">
 
                     <span class="block1" style="display:table-cell!important; vertical-align:middle;">
@@ -128,14 +164,14 @@
                     </span>
                     </div></a>
             </div>
-            <div class="col-md-4" style="margin-bottom:7%;">
+            <div class="col-md-4" style="margin-bottom:20px;">
                 <a href="{{ path('BloggerBlogBundle_seo') }}"><div class="square">
                     <span class="block2" style="display:table-cell!important; vertical-align:middle;">
                         Продвижение сайтов
                     </span>
                     </div></a>
             </div>
-            <div class="col-md-4" style="margin-bottom:7%;">
+            <div class="col-md-4" style="margin-bottom:20px;">
                 <a href="{{ path('BloggerBlogBundle_support') }}"><div class="square">
                     <span class="block3" style="display:table-cell!important; vertical-align:middle;">
                        Ведение и поддержка сайтов
@@ -145,8 +181,8 @@
         </div>
     </div>
 
-    <div class="row home-o-nas-foto">
-        <section class="section bg-custom">
+
+        <section class="home-o-nas-foto container-fluid">
             <div class="container">
                 <div class="row" style="text-align:center;">
                     <div class="col-md-push-3 col-md-6">
@@ -165,7 +201,7 @@
                 </div>
             </div>
         </section>
-    </div>
+
 
 
 
@@ -211,7 +247,7 @@
 
     <section id="home">
 
-        <div id="first-slider" style="background-image: url('/images/fon-slide.jpg');background-size: 100% auto;">
+        <div id="first-slider" class="container-fluid our-sites" style="background-image: url('/images/fon-slide.jpg');background-size: 100% auto;">
             <h3 class="text-white-big" style="padding-top:3%;">
                 Наши работы</h3>
             <div id="carousel-example-generic" class="carousel slide carousel-fade">
@@ -281,7 +317,7 @@
 
                             <!-- Item 6 -->
                             <div class="item slide-content"
-                                 style="background-image: url('/images/work-123.png'); background-size: 100% auto;">
+                                 style="background-image: url('/images/work-8.png'); background-size: 100% auto;">
                                 <div class="bg-overlay"></div>
                             </div>
 
@@ -526,7 +562,6 @@
         </div>
     </div>
 
-
     <div class="row" style="border-top:1px solid #808080; margin-bottom:20px;">
         <div class="container-fluid" style="margin-left: 2%; margin-right: 2%;">
 
@@ -573,7 +608,7 @@
             <div style="text-align: center;">
                 <div class="col-md-2 our-clients" style="margin-bottom:2%;">
                     <div class="" style="text-align:center">
-                        <img src="{{ asset('/images/logo/logo1.png') }}" alt="foto" width="100%"
+                        <img src="{{ asset('/images/logo/logo11-1.png') }}" alt="foto" width="100%"
                              style="/*border: 4px dashed #808080; */ padding: 5px;">
                     </div>
                 </div>
@@ -604,6 +639,32 @@
                 <div class="col-md-2 our-clients" style="margin-bottom:2%;">
                     <div class="" style="text-align:center">
                         <img src="{{ asset('/images/logo/logo2.png') }}" alt="foto" width="100%"
+                             style="/*border: 4px dashed #808080; */ padding: 5px;">
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <div class="col-md-2 our-clients" style="margin-bottom:2%;">
+                    <div class="" style="text-align:center">
+                        <img src="{{ asset('/images/logo/logo17.png') }}" alt="foto" width="100%"
+                             style="/*border: 4px dashed #808080; */ padding: 5px;">
+                    </div>
+                </div>
+                <div class="col-md-2 our-clients" style="margin-bottom:2%;">
+                    <div class="" style="text-align:center">
+                        <img src="{{ asset('/images/logo/logo18.png') }}" alt="foto" width="100%"
+                             style="/*border: 4px dashed #808080; */ padding: 5px;">
+                    </div>
+                </div>
+                <div class="col-md-2 our-clients" style="margin-bottom:2%;">
+                    <div class="" style="text-align:center">
+                        <img src="{{ asset('/images/logo/logo19.png') }}" alt="foto" width="100%"
+                             style="/*border: 4px dashed #808080; */ padding: 5px;">
+                    </div>
+                </div>
+                <div class="col-md-2 our-clients" style="margin-bottom:2%;">
+                    <div class="" style="text-align:center">
+                        <img src="{{ asset('/images/logo/logo16.png') }}" alt="foto" width="100%"
                              style="/*border: 4px dashed #808080; */ padding: 5px;">
                     </div>
                 </div>
